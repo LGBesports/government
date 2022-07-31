@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="market-start-header">
+            <div class="market-start-header__left">
+                <div class="market-start-header__back">
+                    <img src="img/arrow-left.svg" alt="">Вернуться<br>
+                    в личный кабинет
+                </div>
+                <div class="market-start-header__logo">Маркетплейс<br> кадастровых работ </div>
+            </div>
+            <div class="market-start-header__right">
+                <div class="market-start-header__register"><a href="/sign-up.html">Зарегистрироваться</a> </div>
+            </div>
+
+
+        </header>
+        <main class="main-sign-up">
+            <section class="sign-up-form">
+                <div class="sign-up-form__title">Регистрация кадастрового инженера</div>
+                <div class="sign-up-form__main-title">Основное</div>
+                <form class="sign-up-form__form" action="">
+                    <div class="sign-up-form__input-object">
+                        <div class="sign-up-form__input-object-title">Загрузите вашу фотографию </div>
+                        <label for="sign-up-form__input-object-file1"
+                            class="sign-up-form__input-object-file"><span>Выберите</span> файл .jpeg, .png</label>
+                        <input type="file" style="visibility:hidden;" id="sign-up-form__input-object-file1">
+                        <!-- название загруженного файла пишется в консоль -->
+                    </div>
+                    <div class="sign-up-form__input-object">
+                        <div class="sign-up-form__input-object-title">Опыт работы (введите количество лет) </div>
+                        <label for="sign-up-form__input-object-file"></label>
+                        <input type="number" onkeypress="if(this.value.length&gt;1 ) return false;"
+                            class="sign-up-form__input-object-text">
+                    </div>
+                    <div class="sign-up-form__input-object">
+                        <div class="sign-up-form__input-object-title">Образование (напишите ВУЗ) </div>
+                        <label for="sign-up-form__input-object-file"></label>
+                        <input type="text" class="sign-up-form__input-object-text ">
+                        <div id="input0"></div>
+
+
+                        <div class="sign-up-form__input-object-add" onclick="addInput()">Добавить</div>
+                    </div>
+                    <div class="sign-up-form__input-object">
+                        <div class="sign-up-form__input-object-title">Часы работы (например, с 10 до 18)</div>
+                        <label for="sign-up-form__input-object-file"></label>
+                        <input type="text" onkeypress="if(this.value.length&gt;12 ) return false;"
+                            class="sign-up-form__input-object-text">
+                    </div>
+                    <div class="sign-up-form__address">
+                        <div class="sign-up-form__address-input-object">
+                            <div class="sign-up-form__input-object-title">Адрес местонахождения (где вы живёте) </div>
+                            <label for="sign-up-form__input-object-file"></label>
+                            <input type="text" class="sign-up-form__input-object-text ">
+
+                        </div>
+                        <div class="sign-up-form__address-input-object-child">
+                            <div class="sign-up-form__input-object-title">Почтовый индекс </div>
+                            <label for="sign-up-form__input-object-file"></label>
+                            <input onkeypress="if(this.value.length&gt;5 ) return false;" type="number"
+                                class="sign-up-form__input-object-text ">
+
+                        </div>
+                        <div class="sign-up-form__address-input-object">
+                            <div class="sign-up-form__input-object-title">Почтовый адрес</div>
+                            <label for="sign-up-form__input-object-file"></label>
+                            <input type="text" class="sign-up-form__input-object-text ">
+                        </div>
+                    </div>
+                    <div class="sign-up-form__input-object-title">Регионы деятельности, до населенного пункта </div>
+                    <article>
+                        <div class='content'>
+                            <input type="button" value="Добавить" onclick="addField(this)"><br><br>
+                        </div>
+                        <div class="sign-up-form__input-object0">
+                            <input type="text" class="sign-up-form__input-object-text ">
+                        </div>
+                        <!-- генерация инпутов -->
+                        <div class="sign-up-form__input-object1">
+                            <input type="text" class="sign-up-form__input-object-text ">
+                            <input type="button" class="sign-up-form__input-object-change " value="Изменить"
+                                onclick="removeField(this)">
+                            <input type="button" class="sign-up-form__input-object-delete " value="Удалить"
+                                onclick="removeField(this)">
+                        </div>
+                    </article>
+                    <div class="sign-up-form__address">
+                        <div class="sign-up-form__address-input-object">
+                            <div class="sign-up-form__input-object-title">Адрес вашего личного вебсайта, например,
+                                site.ru</div>
+                            <label for="sign-up-form__input-object-file"></label>
+                            <input type="text" class="sign-up-form__input-object-text ">
+                        </div>
+                    </div>
+                    <div class="sign-up-form__address">
+                        <div class="sign-up-form__address-input-object-big">
+                            <div class="sign-up-form__input-object-title-big">Расскажите о себе в нескольких
+                                предложениях. Опишите ваш опыт, особенности работы, и всё, что посчитаете важным</div>
+                            <label for="sign-up-form__input-object-file"></label>
+                            <textarea type="text" class="sign-up-form__input-object-text "></textarea>
+                        </div>
+                    </div>
+                    <div class="sign-up-form__main-title-top">Стоимость работ</div>
+                    <div class="sign-up-form__wrapper">
+                        <div class="sign-up-form__wrap-item">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title">Подготовка межевого плана</div>
+                                <div class="sign-up-form__fromto">
+                                    от
+                                    <input type="number" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                        class="sign-up-form__input-object-fromto">
+                                    рублей
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sign-up-form__wrap-item">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title">Подготовка акта обследования</div>
+                                <div class="sign-up-form__fromto">
+                                    от
+                                    <input type="number" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                        class="sign-up-form__input-object-fromto">
+                                    рублей
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sign-up-form__wrap-item">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title">Подготовка схемы расположения</div>
+                                <div class="sign-up-form__fromto">
+                                    от
+                                    <input type="number" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                        class="sign-up-form__input-object-fromto">
+                                    рублей
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sign-up-form__wrap-item">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title">Подготовка технического плана</div>
+                                <div class="sign-up-form__fromto">
+                                    от
+                                    <input type="number" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                        class="sign-up-form__input-object-fromto">
+                                    рублей
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sign-up-form__wrap-item">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title">Подготовка карты-плана территори </div>
+                                <div class="sign-up-form__fromto">
+                                    от
+                                    <input type="number" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                        class="sign-up-form__input-object-fromto">
+                                    рублей
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sign-up-form__main-title-top">Дипломы и аттестаты</div>
+                    <div class="sign-up-form__input-object">
+                        <div class="sign-up-form__input-object-title">Добавьте сканы аттестата кадастрового инженера,
+                            профессиональных достижений </div>
+                        <label for="sign-up-form__input-object-file1"
+                            class="sign-up-form__input-object-file-zone"><span>Выберите</span>или перенесите файлы
+                            .jpeg, .png</label>
+                        <input type="file" style="visibility:hidden;" id="sign-up-form__input-object-file1">
+                        <!-- название загруженного файла пишется в консоль -->
+                    </div>
+                    <div class="sign-up-form__main-title-top">Данные о членстве в СРО</div>
+                    <div class="sign-up-form__input-object-flex">
+                        <div class="sign-up-form__input-object percent ">
+                            <div class="sign-up-form__input-object-title-botmin">Уникальный реестровый номер в реестре
+                                СРО </div>
+                            <input disabled value="2561651651" id="checkedChange1" type="number"
+                                onkeypress="if(this.value.length&gt;12 ) return false;"
+                                class="sign-up-form__input-object-text percent active">
+                        </div>
+                        <div class="sign-up-form__input-object percent">
+                            <div class="sign-up-form__input-object-title-botmin">Реестровый номер государственного
+                                реестра кадастровых инженеров </div>
+                            <input disabled value="2561651651" id="checkedChange2" type="number"
+                                onkeypress="if(this.value.length&gt;12 ) return false;"
+                                class="sign-up-form__input-object-text percent active">
+                        </div>
+                    </div>
+                    <div class="sign-up-form__input-object percent-more">
+                        <div class="sign-up-form__input-object-title-botmin">Наименование СРО </div>
+                        <input disabled
+                            value='Ассоциация Саморегулируемая организация "Межрегиональный союз кадастровых инженеров" '
+                            id="checkedChange3" type="text" onkeypress="if(this.value.length&gt;12 ) return false;"
+                            class="sign-up-form__input-object-text percent active">
+                    </div>
+                    <div class="sign-up-form__input-object percent">
+                        <div class="sign-up-form__input-object-title-botmin">Дата включения в реестр СРО </div>
+                        <input disabled value="30.06.2016" id="checkedChange4" type="text"
+                            onkeypress="if(this.value.length&gt;9 ) return false;"
+                            class="sign-up-form__input-object-text percent active">
+                    </div>
+                    <div class="sign-up-form__checkbox">
+                        <input checked type="checkbox" id="checkboxEditor" onchange="fun1()">Данные о членстве в СРО
+                        верны
+                    </div>
+                    <div class="sign-up-form__main-title-top">Дипломы и аттестаты</div>
+                    <div class="sign-up-form__radio">
+                        <div class="sign-up-form__radio-item">
+                            <input checked onchange="fun3()" name="radio" type="radio" id="sign-up-form__radio-button1">
+                            <label for="sign-up-form__radio-button1">Индивидуальный предприниматель</label>
+                        </div>
+                        <div class="sign-up-form__radio-item">
+
+                            <input onchange="fun4()" name="radio" type="radio" id="sign-up-form__radio-button2">
+                            <label for="sign-up-form__radio-button2">Сотрудник юридического лица</label>
+                        </div>
+
+
+                    </div>
+                    <div id="sign-up-form__radio-wrap" class="sign-up-form__radio-wrap">
+
+                        <div class="sign-up-form__radio-wrap-left">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">ИНН</div>
+                                <input value="7707083893" id="checkedChange1" type="number"
+                                    onkeypress="if(this.value.length&gt;9 ) return false;"
+                                    class="sign-up-form__input-object-radio">
+                            </div>
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">Наименование </div>
+                                <input value='ООО "Название”' id="checkedChange1" type="text" disabled
+                                    class="sign-up-form__input-object-radio locked">
+                            </div>
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin ">ОГРН</div>
+                                <input value="083893" id="checkedChange1" type="number" disabled
+                                    onkeypress="if(this.value.length&gt;12 ) return false;"
+                                    class="sign-up-form__input-object-radio locked">
+                            </div>
+                            <div class="sign-up-form__input-object  ">
+                                <div class="sign-up-form__input-object-title-botmin">Адрес местонахождения</div>
+                                <input value="г. Москва, адрес" id="checkedChange1" type="text"
+                                    onkeypress="if(this.value.length&gt;9 ) return false;"
+                                    class="sign-up-form__input-object-radio locked">
+                            </div>
+                        </div>
+                        <div class="sign-up-form__radio-wrap-right">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">Телефон юридического лица</div>
+                                <input value="+7 495 000 00 00" id="checkedChange1" type="text"
+                                    onkeypress="if(this.value.length&gt;15 ) return false;"
+                                    class="sign-up-form__input-object-radio locked">
+                            </div>
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">Email юридического лица</div>
+                                <input value="info@nazvaniye.ru" id="checkedChange1" type="text"
+                                    class="sign-up-form__input-object-radio locked">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div id="sign-up-form__radio-wrap2" class="sign-up-form__radio-wrap2 active">
+                        <div class="sign-up-form__radio-wrap-left">
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">ИНН</div>
+                                <input value="770708389311" id="checkedChange1" type="number"
+                                    onkeypress="if(this.value.length&gt;11 ) return false;"
+                                    class="sign-up-form__input-object-radio">
+                            </div>
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin">ОГРНИП </div>
+                                <input value='083893' id="checkedChange1" type="text"
+                                    onkeypress="if(this.value.length&gt;14 ) return false;"
+                                    class="sign-up-form__input-object-radio">
+                            </div>
+                            <div class="sign-up-form__input-object">
+                                <div class="sign-up-form__input-object-title-botmin ">Дата внесения в ЕГРИП</div>
+                                <input value="21.10.2014" id="checkedChange1" type="text"
+                                    onkeypress="if(this.value.length&gt;9 ) return false;"
+                                    class="sign-up-form__input-object-radio">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="sign-up-form__news-wrap">
+                        Не получать предложени о заказах
+                        <label class="sign-up-form__news">
+                            <input class="sign-up-form__news-input" type="checkbox">
+                            <span></span>
+
+                        </label>
+                        Получать предложения о заказах
+                        <img src="img/reg-question.svg" alt="">
+                    </div>
+                    <button type="submit" class="sign-up-form__reg-button"><a href="">зарегистрироваться</a>
+                       
+                    </button>
+
+
+
+    </div>
+
+    </form>
+
+    </section>
+    <div class="sign-up-form__support"><img src="img/support.svg" alt=""></div>
+    <div class="sign-up-form__pop-up " id="pop-up-window">
+        <div class="sign-up-form__pop-up-wrapper">
+            <div  class="sign-up-form__search_box">
+                <form action="/search.htm">
+                    <input type="text" name="search" id="search" placeholder="Начните вводить адрес...">
+                    <input type="submit">
+                </form>
+                <div id="search_box-result"></div>
+                <div onclick="closePopUp()" class="sign-up-form__button-back">отмена</div>
+                <input  type="button" value="Добавить" onclick="closePopUp()" class="sign-up-form__button-confirm"><br><br>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    </div>
+    <script>
+        function fun1() {
+            var chbox;
+            chbox = document.getElementById('checkboxEditor');
+            let started1 = document.getElementById('checkedChange1');
+            let started2 = document.getElementById('checkedChange2');
+            let started3 = document.getElementById('checkedChange3');
+            let started4 = document.getElementById('checkedChange4');
+
+            if (chbox.checked) {
+                started1.classList.add("active");
+                started2.classList.add("active");
+                started3.classList.add("active");
+                started4.classList.add("active");
+                started1.disabled = true;
+                started2.disabled = true;
+                started3.disabled = true;
+                started4.disabled = true;
+
+            }
+            else {
+                started1.classList.remove("active");
+                started2.classList.remove("active");
+                started3.classList.remove("active");
+                started4.classList.remove("active");
+                started1.disabled = false;
+                started2.disabled = false;
+                started3.disabled = false;
+                started4.disabled = false;
+            }
+        }
+        function fun3() {
+            var radio3;
+            var radio3Delete;
+            var radioButton1;
+            radioButton1 = document.getElementById('sign-up-form__radio-button1');
+            radio3 = document.getElementById('sign-up-form__radio-wrap2');
+            radio3Delete = document.getElementById('sign-up-form__radio-wrap');
+
+
+            if (radioButton1.checked) {
+                radio3.classList.add("active");
+                radio3Delete.classList.remove("active");
+            }
+            else {
+
+            }
+        }
+        function fun4() {
+            var radio4;
+            var radio4Delete;
+            var radioButton1;
+            radioButton2 = document.getElementById('sign-up-form__radio-button2');
+            radio4 = document.getElementById('sign-up-form__radio-wrap');
+            radio4Delete = document.getElementById('sign-up-form__radio-wrap2');
+
+
+            if (radioButton2.checked) {
+                radio4.classList.add("active");
+                radio4Delete.classList.remove("active");
+            }
+            else {
+
+            }
+        }
+        //заблокировать ввод в input с помощью чекбокса
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script>
+        $(document).ready(function () {
+            var $result = $('#search_box-result');
+
+            $('#search').on('keyup', function () {
+                var search = $(this).val();
+                if ((search != '') && (search.length > 1)) {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://snipp.ru/ajax.php?inc_id=12382",
+                        data: { 'search': search },
+                        success: function (msg) {
+                            $result.html(msg);
+                            if (msg != '') {
+                                $result.fadeIn();
+                            } else {
+                                $result.fadeOut(100);
+                            }
+                        }
+                    });
+                } else {
+                    $result.html('');
+                    $result.fadeOut(100);
+                }
+            });
+
+            $(document).on('click', '.search_result-name a', function () {
+                $('#search').val($(this).text());
+                $result.fadeOut(100);
+                return false;
+            });
+
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.search_box').length) {
+                    $result.html('');
+                    $result.fadeOut(100);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        var x = 0;
+
+        function addInput() {
+            if (x < 2) {
+                var str = '<input  type="text" class="sign-up-form__input-object-text "> <div id="input' + (x + 1) + '"></div>';
+                document.getElementById('input' + x).innerHTML = str;
+                x++;
+            } else {
+                alert('У вас не может быть больше трёх высших образований');
+            }
+        }
+        //добавление новых полей
+
+        function removeField(btn) {
+            var div = btn.closest(".sign-up-form__input-object1");
+            
+            if (div) {
+                div.remove();
+            }
+        }
+
+        function addField(btn) {
+            document.getElementById('pop-up-window').classList.add("active");
+            var form = btn.closest("article");
+            if (form) {
+                var div1 = form.querySelector(".sign-up-form__input-object1");
+                if (div1) {
+                    
+                    var div = document.createElement("div");
+                    div.className = div1.className;
+                    div.innerHTML = div1.innerHTML;
+                    form.appendChild(div);
+                }
+            }
+        }
+        
+        //добавление новых полей с delete
+        function closePopUp() {
+            document.getElementById('pop-up-window').classList.remove("active");
+            
+        }
+        
+        //закрывание поиска
+
+
+    </script>
+    <script>
+
+        $("#sign-up-form__input-object-file1").change(function () {
+            filename = this.files[0].name;
+            console.log(filename);
+        });
+        //источник названия файла
+
+    </script>
+
+</body>
+
+</html>
