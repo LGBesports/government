@@ -212,8 +212,8 @@
                             class="sign-up-form__input-object-text percent active">
                     </div>
                     <div class="sign-up-form__checkbox">
-                        <input checked type="checkbox" id="checkboxEditor" onchange="fun1()">Данные о членстве в СРО
-                        верны
+                        <input checked type="checkbox" id="checkboxEditor" onchange="fun1()"> <label for="checkboxEditor">Данные о членстве в СРО верны</label> 
+                        
                     </div>
                     <div class="sign-up-form__main-title-top">Дипломы и аттестаты</div>
                     <div class="sign-up-form__radio">
@@ -252,7 +252,7 @@
                             <div class="sign-up-form__input-object  ">
                                 <div class="sign-up-form__input-object-title-botmin">Адрес местонахождения</div>
                                 <input value="г. Москва, адрес" id="checkedChange1" type="text"
-                                    onkeypress="if(this.value.length&gt;9 ) return false;"
+                                    onkeypress="if(this.value.length&gt;9 ) return false;" disabled
                                     class="sign-up-form__input-object-radio locked">
                             </div>
                         </div>
@@ -260,13 +260,13 @@
                             <div class="sign-up-form__input-object">
                                 <div class="sign-up-form__input-object-title-botmin">Телефон юридического лица</div>
                                 <input value="+7 495 000 00 00" id="checkedChange1" type="text"
-                                    onkeypress="if(this.value.length&gt;15 ) return false;"
+                                    onkeypress="if(this.value.length&gt;15 ) return false;" disabled
                                     class="sign-up-form__input-object-radio locked">
                             </div>
                             <div class="sign-up-form__input-object">
                                 <div class="sign-up-form__input-object-title-botmin">Email юридического лица</div>
-                                <input value="info@nazvaniye.ru" id="checkedChange1" type="text"
-                                    class="sign-up-form__input-object-radio locked">
+                                <input value="info@nazvaniye.ru" id="checkedChange1" type="text"disabled
+                                    class="sign-up-form__input-object-radio locked"> 
                             </div>
 
                         </div>
@@ -310,9 +310,7 @@
                         Получать предложения о заказах
                         <img src="img/reg-question.svg" alt="">
                     </div>
-                    <button type="submit" class="sign-up-form__reg-button"><a href="">зарегистрироваться</a>
-                       
-                    </button>
+                    <button type="" class="sign-up-form__reg-button"><a href="/profile.html">зарегистрироваться</a></button>
 
 
 
@@ -338,172 +336,10 @@
     </main>
 
     </div>
-    <script>
-        function fun1() {
-            var chbox;
-            chbox = document.getElementById('checkboxEditor');
-            let started1 = document.getElementById('checkedChange1');
-            let started2 = document.getElementById('checkedChange2');
-            let started3 = document.getElementById('checkedChange3');
-            let started4 = document.getElementById('checkedChange4');
-
-            if (chbox.checked) {
-                started1.classList.add("active");
-                started2.classList.add("active");
-                started3.classList.add("active");
-                started4.classList.add("active");
-                started1.disabled = true;
-                started2.disabled = true;
-                started3.disabled = true;
-                started4.disabled = true;
-
-            }
-            else {
-                started1.classList.remove("active");
-                started2.classList.remove("active");
-                started3.classList.remove("active");
-                started4.classList.remove("active");
-                started1.disabled = false;
-                started2.disabled = false;
-                started3.disabled = false;
-                started4.disabled = false;
-            }
-        }
-        function fun3() {
-            var radio3;
-            var radio3Delete;
-            var radioButton1;
-            radioButton1 = document.getElementById('sign-up-form__radio-button1');
-            radio3 = document.getElementById('sign-up-form__radio-wrap2');
-            radio3Delete = document.getElementById('sign-up-form__radio-wrap');
-
-
-            if (radioButton1.checked) {
-                radio3.classList.add("active");
-                radio3Delete.classList.remove("active");
-            }
-            else {
-
-            }
-        }
-        function fun4() {
-            var radio4;
-            var radio4Delete;
-            var radioButton1;
-            radioButton2 = document.getElementById('sign-up-form__radio-button2');
-            radio4 = document.getElementById('sign-up-form__radio-wrap');
-            radio4Delete = document.getElementById('sign-up-form__radio-wrap2');
-
-
-            if (radioButton2.checked) {
-                radio4.classList.add("active");
-                radio4Delete.classList.remove("active");
-            }
-            else {
-
-            }
-        }
-        //заблокировать ввод в input с помощью чекбокса
-    </script>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
-    <script>
-        $(document).ready(function () {
-            var $result = $('#search_box-result');
-
-            $('#search').on('keyup', function () {
-                var search = $(this).val();
-                if ((search != '') && (search.length > 1)) {
-                    $.ajax({
-                        type: "POST",
-                        url: "https://snipp.ru/ajax.php?inc_id=12382",
-                        data: { 'search': search },
-                        success: function (msg) {
-                            $result.html(msg);
-                            if (msg != '') {
-                                $result.fadeIn();
-                            } else {
-                                $result.fadeOut(100);
-                            }
-                        }
-                    });
-                } else {
-                    $result.html('');
-                    $result.fadeOut(100);
-                }
-            });
-
-            $(document).on('click', '.search_result-name a', function () {
-                $('#search').val($(this).text());
-                $result.fadeOut(100);
-                return false;
-            });
-
-            $(document).on('click', function (e) {
-                if (!$(e.target).closest('.search_box').length) {
-                    $result.html('');
-                    $result.fadeOut(100);
-                }
-            });
-        });
-    </script>
-
-    <script>
-        var x = 0;
-
-        function addInput() {
-            if (x < 2) {
-                var str = '<input  type="text" class="sign-up-form__input-object-text "> <div id="input' + (x + 1) + '"></div>';
-                document.getElementById('input' + x).innerHTML = str;
-                x++;
-            } else {
-                alert('У вас не может быть больше трёх высших образований');
-            }
-        }
-        //добавление новых полей
-
-        function removeField(btn) {
-            var div = btn.closest(".sign-up-form__input-object1");
-            
-            if (div) {
-                div.remove();
-            }
-        }
-
-        function addField(btn) {
-            document.getElementById('pop-up-window').classList.add("active");
-            var form = btn.closest("article");
-            if (form) {
-                var div1 = form.querySelector(".sign-up-form__input-object1");
-                if (div1) {
-                    
-                    var div = document.createElement("div");
-                    div.className = div1.className;
-                    div.innerHTML = div1.innerHTML;
-                    form.appendChild(div);
-                }
-            }
-        }
-        
-        //добавление новых полей с delete
-        function closePopUp() {
-            document.getElementById('pop-up-window').classList.remove("active");
-            
-        }
-        
-        //закрывание поиска
-
-
-    </script>
-    <script>
-
-        $("#sign-up-form__input-object-file1").change(function () {
-            filename = this.files[0].name;
-            console.log(filename);
-        });
-        //источник названия файла
-
-    </script>
+    <script src="js/script-for-all.js"></script>
 
 </body>
 

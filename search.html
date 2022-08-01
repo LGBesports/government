@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="market-start-header">
+            <div class="market-start-header__left">
+                <div class="market-start-header__back">
+                    <img src="img/arrow-left.svg" alt="">Вернуться<br>
+                    в личный кабинет
+                </div>
+                <div class="market-start-header__logo">Маркетплейс<br> кадастровых работ </div>
+                <nav class="market-start-header__nav">
+                    <ul>
+                        <li class="active"><a href="/search.html">Найти заказ</a> </li>
+                        <li><a href="">Мои заказы</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="market-start-header__right-normal">
+                <nav class="market-start-header__nav-right">
+                    <ul>
+                        <li><a href=""><img src="img/nav-messages.svg" alt=""></a></li>
+                        <li><a href=""><img src="img/nav-notifications.svg" alt=""></a></li>
+                        <li><a href=""><img src="img/nav-settings.svg" alt=""></a></li>
+                    </ul>
+
+                </nav>
+                <div class="market-start-header__nav-ava">
+                    <a href=""><img src="img/nav-avatar.png" alt=""></a>
+                </div>
+            </div>
+
+
+        </header>
+        <main class="search__main">
+            <section class="search__filter">
+                <div class="search__filter-title">Фильтр для поиска заказов</div>
+                <div class="search__filter-parametrs">
+                    <form action="">
+                        <div class="search__filter-parametrs-location">
+                            <label for="search__filter-parametrs-location">Регион заказа, точность поиска до
+                                улицы</label>
+                            <input type="text" id="search__filter-parametrs-location">
+                        </div>
+                        <div class="search__filter-parametrs-date">
+                            <label for="search__filter-parametrs-date">Срок выполнения до даты</label>
+                            <input type="date" id="search__filter-parametrs-date">
+                        </div>
+                        <div class="search__filter-parametrs-time">
+                            <div class="search__filter-parametrs-time-pad"><label
+                                    for="search__filter-parametrs-time">Срок
+                                    выполнения в днях</label></div>
+                            <div class="search__filter-parametrs-time-wrapper"><span>от</span>
+                                <input onkeypress="if(this.value.length&gt;2 ) return false;" type="number"
+                                    id="search__filter-parametrs-time">
+                                <small>до</small>
+                                <input onkeypress="if(this.value.length&gt;2 ) return false;" type="number"
+                                    id="search__filter-parametrs-time">
+                                <b>дней</b>
+                            </div>
+
+                        </div>
+                        <div class="search__filter-parametrs-submit"><a href="">применить</a> </div>
+                        <div class="search__filter-parametrs-delete"><a href="">сброс</a></div>
+                    </form>
+                </div>
+                <div class="search__filter-boxes">
+                    <div class="search__filter-boxes-item">
+                        <input id="search__filter-boxes-input1" type="checkbox"><label
+                            for="search__filter-boxes-input1">Заказы без откликов</label>
+                    </div>
+                    <div class="search__filter-boxes-item">
+                        <input id="search__filter-boxes-input2" type="checkbox"><label
+                            for="search__filter-boxes-input2">Показывать только заказы с предоплатой</label>
+                    </div>
+                    <div class="search__filter-boxes-item">
+                        <input id="search__filter-boxes-input3" type="checkbox"><label
+                            for="search__filter-boxes-input3">Только заказы где указана стоимость</label>
+                    </div>
+                </div>
+            </section>
+            <div class="search__orders">
+                <div class="search__orders-filter">
+                    <div class="search__orders-filter-first">
+                        <div class="search__orders-filter-title">
+                            Заказчик
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input4" type="checkbox"><label
+                                for="search__filter-boxes-input4">Физическое лица</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input5" type="checkbox"><label
+                                for="search__filter-boxes-input5">Юридическое лицо</label>
+                        </div>
+
+                    </div>
+                    <div class="search__orders-filter-second">
+                        <div class="search__orders-filter-title">
+                            Виды кадастровых работ
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input6" type="checkbox"><label
+                                for="search__filter-boxes-input6">Подготовка межевого плана</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input7" type="checkbox"><label
+                                for="search__filter-boxes-input7">Подготовка технического <br> плана</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input8" type="checkbox"><label
+                                for="search__filter-boxes-input8">Подготовка акта обследования</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input9" type="checkbox"><label
+                                for="search__filter-boxes-input9">Подготовка карты-плана территории</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input10" type="checkbox"><label
+                                for="search__filter-boxes-input10">Подготовка схемы расположения</label>
+                        </div>
+                        <div class="search__filter-boxes-item second">
+                            <input id="search__filter-boxes-input11" type="checkbox"><label
+                                for="search__filter-boxes-input11">Подготовка иных документов</label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="search__orders-wrapper">
+                    <div class="search__orders-wrapper-flex">
+                        <div class="search__orders-wrapper-title">Найденные заказы </div>
+                        <div class="search__orders-wrapper-sort">Сортировать
+                            <div class="search__orders-wrapper-sort-types">
+                                <button onclick="filter1()" id="filter-changer1">по дате публикации</button><button
+                                    onclick="filter2()" id="filter-changer2" class="active">по срочности</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__orders-wrapper-orders">
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка технического
+                                        плана</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Земельный участок
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 10 июля 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon4.svg" alt="">до 50 000 ₽
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">Без предоплаты
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан 10 минут назад</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span>ООО Название предприятия</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка межевого
+                                        плана</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Здание
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 22 июля 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">С предоплатой
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка проекта
+                                        межевания территории</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Помещение
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 5 августа 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon4.svg" alt="">до 50 000 ₽
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">Без предоплаты
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span>ООО Название предприятия</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка акта
+                                        обследования</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Объект незавершенного строительства
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 10 августа 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">С предоплатой
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка межевого
+                                        плана</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Земельный участок
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 10 июля 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon4.svg" alt="">до 50 000 ₽
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">С предоплатой
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка проекта
+                                        межевания территории</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Земельный участок
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 10 июля 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+                                        <!-- <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon4.svg" alt="">до 50 000 ₽
+                                        </div> -->
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">С предоплатой
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__orders-wrapper-orders-item">
+                            <!-- <a class="search__orders-wrapper-orders-item-link" href=""></a> если надо на весь блок ссылку -->
+                            <div class="search__orders-wrapper-orders-item-left">
+                                <div class="search__orders-wrapper-orders-item-name"><a href="/order-start.html">Подготовка акта
+                                        обследования</a> </div>
+                                <div class="search__orders-wrapper-orders-item-data">
+                                    <div class="search__orders-wrapper-orders-item-data-first">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon1.svg" alt="">Земельный участок
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon2.svg" alt="">Выполить до 10 июля 2022
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon3.svg" alt="">7-я Кожуховская улица, Москва
+                                        </div>
+                                    </div>
+                                    <div class="search__orders-wrapper-orders-item-data-second">
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon4.svg" alt="">до 50 000 ₽
+                                        </div>
+                                        <div class="search__orders-wrapper-orders-item-data-item">
+                                            <img src="img/search-icon5.svg" alt="">С предоплатой
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="search__orders-wrapper-orders-item-right">
+                                <div class="search__orders-wrapper-orders-item-when">создан вчера, в 19:30</div>
+                                <div class="search__orders-wrapper-orders-item-сlient">
+                                    <a href="/buisness.html">Николай Иванов</a>
+                                    <span>ООО Название предприятия</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__orders-wrapper-orders-pager">
+                        <div class="search__orders-wrapper-orders-pager-left">
+                            <button class="button-left">< Назад</button> 
+                            <div class="search__orders-wrapper-orders-pager-left-select">
+                                Показывать на странице: <select name="pager" id="search__orders-wrapper-orders-pager">
+                                    <option>10</option>
+                                    <option>20</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="search__orders-wrapper-orders-pager-right">
+                            <button class="button-right">Вперёд ></button> 
+                            <div class="search__orders-wrapper-orders-pager-right-navigation">
+                                <button class="active">1</button>
+                                <button>2</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="sign-up-form__support"><img src="img/support.svg" alt=""></div>
+        </main>
+
+
+    </div>
+    <script src="js/script-for-all.js"></script>
+</body>
+
+</html>

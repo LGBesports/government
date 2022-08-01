@@ -8,7 +8,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 2.5vmin 4.6vmin;
+    padding-left: 3% ;
+    padding-top: 4vmin;
+    padding-bottom: 4vmin;
+    padding-right: 2.7%;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.09);
     // .market-start-header__left
 
@@ -29,12 +32,61 @@ body{
 
         color: #595757;
         img{
-            margin-right: 1.3vmin;
+            margin-right: 1.4vmin;
             height: 3vmin;
             width: 1.5vmin;
         }
     }
-
+    &__nav{
+        margin-left: 8vmin;
+        ul{
+            display: flex;
+            gap: 5vmin;
+            li a{
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.8vmin;
+                line-height:3vmin;
+                color: #000000;
+            }
+            li:hover a{
+                border-bottom: 1px solid #000000;
+                line-height: 3vmin;
+            }
+        }
+        &-ava{
+            height: 7vmin;
+            width: 7vmin;
+            border-radius: 10vmin;
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__nav-right{
+        ul{
+            display: flex;
+            gap: 4vmin;
+            li a{
+                width: 3.5vmin;
+                    height: 3.5vmin;
+                    display: block;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+        }
+    }
+    &__right-normal{
+        display: flex;
+        align-items: center;
+        gap: 3vmin;
+    }
     // .market-start-header__logo
 
     &__logo {
@@ -591,15 +643,58 @@ margin-bottom: 2.7vmin;
     &__checkbox{
         display: flex;
         align-items: center;
-        color: #515354;
-        font-weight: 400;
-        font-size: 1.9vmin;
-        line-height: 2.8vmin;
+        margin-left: 2.8vmin;
         
         input{
             width: 2vmin;
             height: 2vmin; 
             margin-right: 1vmin;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        label {
+            color: #515354;
+            font-weight: 400;
+            font-size: 1.9vmin;
+            line-height: 1.9vmin;
+            cursor: pointer; 
+            position: relative;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;      
+        }
+        label:before {
+            content: " ";
+            
+            background: url(../img/search-notChecked.svg);
+            background-size: 1.8vmin 1.8vmin;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: row;
+            left: -2.8vmin;
+            top: 0;
+            position: absolute;
+            width: 2vmin;
+            height: 2vmin;
+        }
+        input:checked + label:before {
+            content: " ";
+            
+            background: url(../img/search-Checked.svg);
+            background-size: 1.8vmin 1.8vmin;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            left: -2.8vmin;
+            top: 0;
+            position: absolute;
+            width: 2vmin;
+            height: 2vmin;
         }
     }
     
@@ -607,16 +702,60 @@ margin-bottom: 2.7vmin;
         
         padding-top: 1.5vmin;
         display: flex;
+        margin-left: 4vmin;
         gap: 1.6vmin;
         flex-direction: column;
         color: #1C1D1E;
         font-size: 2.2vmin;
-        line-height: 2.4vmin;
+        line-height: 2.2vmin;
         margin-bottom: 5vmin;
-        input{
-            margin-right: 2vmin;
-            width: 2.6vmin;
-            height: 2.6vmin;
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+            color: #515354;
+            font-weight: 400;
+            font-size: 2.2vmin;
+            line-height: 3vmin;
+            
+            cursor: pointer; 
+            position: relative;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -khtml-user-select: none;    /* Konqueror */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none;      
+        }
+        label:before {
+            content: " ";
+            
+            background: url(../img/sign-up-radioNotChecked.svg);
+            background-size: 2.8vmin 2.8vmin;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: row;
+            left: -4.6vmin;
+            top: 0;
+            position: absolute;
+            width: 3vmin;
+            height: 3vmin;
+            
+        }
+        input:checked + label:before {
+            content: " ";
+            
+            background: url(../img/sign-up-radioChecked.svg);
+            background-size: 2.8vmin 2.8vmin;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            left: -4.6vmin;
+            top: 0;
+            position: absolute;
+            width: 3vmin;
+            height: 3vmin;
         }
         &-item{
             display: flex;
@@ -636,6 +775,12 @@ margin-bottom: 2.7vmin;
             }
             &-left{
                 grid-area: 1 / 1 / 5 / 2; 
+            }
+            &-right2{
+                width: 50%;
+            }
+            &-left2{
+                width: 50%;
             }
             &.active{
                 display: grid;
@@ -657,6 +802,10 @@ margin-bottom: 2.7vmin;
     &__radio-wrap2.active{
         display: block;
     }
+    &__radio-wrap2.active.better{
+        display: flex;
+        width: calc(68% + 8.5vmin);
+    }
     &__radio-wrap2{
         display: none;
     }
@@ -677,6 +826,11 @@ margin-bottom: 2.7vmin;
             font-size: 1.6vmin;
             line-height: 2.2vmin;
             text-transform: uppercase;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     &__address{
@@ -727,9 +881,7 @@ margin-bottom: 2.7vmin;
     -webkit-appearance: none;
     margin: 0;
 }
-.sign-up-form__input-object0:first-child {
-    
-  }
+
 article{
     .content{
         input{
@@ -934,6 +1086,7 @@ article {
     text-transform: uppercase;
     left: 5%;
     background: #008CFF;
+    cursor: pointer;
 }
 .sign-up-form__button-confirm{
     position: absolute;
@@ -950,4 +1103,5 @@ article {
     text-transform: uppercase;
     right: 5%;
     background: #008CFF;
+    cursor: pointer;
 }

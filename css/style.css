@@ -89,7 +89,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5vmin 4.6vmin;
+  padding-left: 3%;
+  padding-top: 4vmin;
+  padding-bottom: 4vmin;
+  padding-right: 2.7%;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.09);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.09);
 }
@@ -119,9 +122,75 @@ body {
 }
 
 .market-start-header__back img {
-  margin-right: 1.3vmin;
+  margin-right: 1.4vmin;
   height: 3vmin;
   width: 1.5vmin;
+}
+
+.market-start-header__nav {
+  margin-left: 8vmin;
+}
+
+.market-start-header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5vmin;
+}
+
+.market-start-header__nav ul li a {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8vmin;
+  line-height: 3vmin;
+  color: #000000;
+}
+
+.market-start-header__nav ul li:hover a {
+  border-bottom: 1px solid #000000;
+  line-height: 3vmin;
+}
+
+.market-start-header__nav-ava {
+  height: 7vmin;
+  width: 7vmin;
+  border-radius: 10vmin;
+}
+
+.market-start-header__nav-ava img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.market-start-header__nav-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4vmin;
+}
+
+.market-start-header__nav-right ul li a {
+  width: 3.5vmin;
+  height: 3.5vmin;
+  display: block;
+}
+
+.market-start-header__nav-right ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+.market-start-header__right-normal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3vmin;
 }
 
 .market-start-header__logo {
@@ -702,10 +771,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #515354;
-  font-weight: 400;
-  font-size: 1.9vmin;
-  line-height: 2.8vmin;
+  margin-left: 2.8vmin;
 }
 
 .sign-up-form__checkbox input {
@@ -714,11 +780,71 @@ body {
   margin-right: 1vmin;
 }
 
+.sign-up-form__checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.sign-up-form__checkbox label {
+  color: #515354;
+  font-weight: 400;
+  font-size: 1.9vmin;
+  line-height: 1.9vmin;
+  cursor: pointer;
+  position: relative;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.sign-up-form__checkbox label:before {
+  content: " ";
+  background: url(../img/search-notChecked.svg);
+  background-size: 1.8vmin 1.8vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: -2.8vmin;
+  top: 0;
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.sign-up-form__checkbox input:checked + label:before {
+  content: " ";
+  background: url(../img/search-Checked.svg);
+  background-size: 1.8vmin 1.8vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: -2.8vmin;
+  top: 0;
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+}
+
 .sign-up-form__radio {
   padding-top: 1.5vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 4vmin;
   gap: 1.6vmin;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -726,14 +852,67 @@ body {
           flex-direction: column;
   color: #1C1D1E;
   font-size: 2.2vmin;
-  line-height: 2.4vmin;
+  line-height: 2.2vmin;
   margin-bottom: 5vmin;
 }
 
-.sign-up-form__radio input {
-  margin-right: 2vmin;
-  width: 2.6vmin;
-  height: 2.6vmin;
+.sign-up-form__radio input[type="radio"] {
+  display: none;
+}
+
+.sign-up-form__radio label {
+  color: #515354;
+  font-weight: 400;
+  font-size: 2.2vmin;
+  line-height: 3vmin;
+  cursor: pointer;
+  position: relative;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.sign-up-form__radio label:before {
+  content: " ";
+  background: url(../img/sign-up-radioNotChecked.svg);
+  background-size: 2.8vmin 2.8vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: -4.6vmin;
+  top: 0;
+  position: absolute;
+  width: 3vmin;
+  height: 3vmin;
+}
+
+.sign-up-form__radio input:checked + label:before {
+  content: " ";
+  background: url(../img/sign-up-radioChecked.svg);
+  background-size: 2.8vmin 2.8vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: -4.6vmin;
+  top: 0;
+  position: absolute;
+  width: 3vmin;
+  height: 3vmin;
 }
 
 .sign-up-form__radio-item {
@@ -774,6 +953,14 @@ body {
   grid-area: 1 / 1 / 5 / 2;
 }
 
+.sign-up-form__radio-wrap-right2 {
+  width: 50%;
+}
+
+.sign-up-form__radio-wrap-left2 {
+  width: 50%;
+}
+
 .sign-up-form__radio-wrap.active {
   display: -ms-grid;
   display: grid;
@@ -801,6 +988,13 @@ body {
   display: block;
 }
 
+.sign-up-form__radio-wrap2.active.better {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(68% + 8.5vmin);
+}
+
 .sign-up-form__radio-wrap2 {
   display: none;
 }
@@ -825,6 +1019,17 @@ body {
   font-size: 1.6vmin;
   line-height: 2.2vmin;
   text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sign-up-form__address {
@@ -1101,6 +1306,7 @@ article .content input {
   text-transform: uppercase;
   left: 5%;
   background: #008CFF;
+  cursor: pointer;
 }
 
 .sign-up-form__button-confirm {
@@ -1124,5 +1330,6 @@ article .content input {
   text-transform: uppercase;
   right: 5%;
   background: #008CFF;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

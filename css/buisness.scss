@@ -1,0 +1,193 @@
+.buisness{
+    &__main{
+        margin-top: 17vmin;
+        margin-left: 30vmin;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        width: 13vmin;
+        img{
+            width: 13vmin;
+            height: 13vmin;
+            display: block;
+            object-fit: contain;
+            border-radius: 10vmin;
+        }
+        button{ 
+            margin: 0 auto;
+            background: none;
+            margin-top: 1vmin;
+            font-weight: 400;
+            font-size: 1.7vmin;
+            line-height: 2.1vmin;
+            text-decoration-line: underline;
+            color: #515354;
+        }
+        
+        
+    }
+    &__right{
+        &-title{
+            color: #0C0C0C;
+            font-weight: 600;
+            font-size: 4vmin;
+            line-height: 4.5vmin;
+        }
+        &-company{
+            display: inline-block;
+            font-size: 2.5vmin;
+            line-height: 2.9vmin;
+            color: #979797;
+            text-decoration: underline;
+            margin-top: 1.5vmin;
+            padding-right: 1vmin;
+            position: relative;
+            b{
+                font-weight: 400;
+                cursor: pointer;
+            }
+            &-help{
+                color: #3A3A3A;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                max-width: 70vmin;
+                min-width: 50vmin;
+                
+                span{
+                    color: #818181;
+                    margin-right: 0.7vmin;
+                }
+                &-item{
+                    margin-right: 3.5vmin;
+                    
+                }
+                &-top{
+                    display: flex;
+                }
+                &-middle{
+                    display: flex;
+                    margin-top: 1vmin;
+                }
+                &-bottom{
+                    display: block;
+                    margin-top: 1.5vmin;
+                }
+                a{
+                    color: #008CFF;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                }
+            }
+        }
+        &-orders{
+            color: #373737;
+            margin-top: 6vmin;
+            font-size: 2vmin;
+            line-height: 2.3vmin;
+            span{
+                color: #008CFF;
+            }
+        }
+        .buisness__right-company-help{
+            display: none;
+        }
+        .buisness__right-company:hover .buisness__right-company-help{
+            display: block;
+            position: absolute;
+            left: 100%;
+            bottom: 50%;
+            padding-top: 2.1vmin;
+            padding-left: 2.7vmin;
+            padding-bottom: 2.4vmin;
+            padding-right: 4vmin;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 16px 16px 16px 0px;
+        }
+        
+    }
+    &__description{
+        display: flex;
+        gap: 5.5vmin;
+    }
+}
+.buisness-details{
+    &__main{
+        margin-top: 17vmin;
+        margin-left: 30vmin;
+    }
+    &__title{
+        color: #0C0C0C;
+        font-weight: 600;
+        font-size: 4vmin;
+        line-height: 4.5vmin;
+    }
+    &__data{
+        margin-top: 1.6vmin;
+        display: flex;
+        gap: 8vmin;
+        font-size: 2vmin;
+        line-height: 2.3vmin;
+        span{
+            color: #818181;
+            margin-right: 0.7vmin;
+        }
+    }
+    &__made{
+        margin-top: 6vmin;
+        
+        &-title{
+            color: #373737;
+            font-size: 2.4vmin;
+            line-height: 2.8vmin;
+            margin-bottom: 6vmin;
+        }
+        &-who{
+            max-width: 65vmin;
+            display: flex;
+            gap: 10vmin;
+            flex-wrap: wrap;
+            &-item{
+                display: flex;
+                align-items: center;
+                gap: 2vmin;
+                &-logo{
+                    width: 6.7vmin;
+                    height: 6.7vmin;
+                    object-fit: contain;
+                    border-radius: 10vmin;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+                &-logo:hover{
+                    width: 6.7vmin;
+                    height: 6.7vmin;
+                    object-fit: contain;
+                    border-radius: 10vmin;
+                    box-shadow:  0 0.4vmin 0.4vmin 0  rgba(0, 0, 0, 0.25);
+                    
+                }
+                &-name{
+                    color: #373737;
+                    text-decoration: none;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                    
+                    span{
+                    text-decoration: underline;
+                    font-size: 2.2vmin;
+                    line-height: 2.5vmin;
+                    color: #0F0F0F;
+                    display: block;
+                    margin-bottom: 0.5vmin;
+                    
+                    }
+                }
+            }
+        }
+    }
+}
