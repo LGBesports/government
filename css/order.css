@@ -294,6 +294,10 @@
   margin-top: 1.5vmin;
 }
 
+.order-start__status.topm {
+  margin-top: 4.5vmin;
+}
+
 .order-start__map {
   width: 100%;
   height: 25vmin;
