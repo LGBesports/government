@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order-start-pop.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="order-start-pop__main">
+            <div class="order-start-pop__wrapper-big">
+                <div class="order-start-pop__title">Отправить договор</div>
+                <div class="pop-contract__choose">
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractClose()" id="pop-contract__choose1" name="contract1"
+                            type="radio"><label for="pop-contract__choose1">Cформировать автоматически <img
+                                src="img/reg-question.svg" alt=""></label>
+                    </div>
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractOpen()" id="pop-contract__choose2" name="contract1"
+                            type="radio"><label for="pop-contract__choose2">Отправлю собственный файл</label>
+                    </div>
+                </div>
+                <div id="pop-contract__file" class="pop-contract__file ">
+                    <div class="pop-contract__file-title">Файл договора</div>
+                    <div class="pop-contract__file-input">
+                        <input id="pop-contract__file-input" type="file" style="display: none;">
+                        <label for="pop-contract__file-input">Выбрать файл</label>
+                    </div>
+                </div>
+                <div class="pop-contract__inputs">
+                    <div class="pop-contract__inputs-input">
+                        <label for="pop-contract__inputs-input1">Объект проведения кадастровых работ</label><br>
+                        <select id="pop-contract__inputs-input1" name="abc" id="10">
+                            <option value="1"> AAAAAAAAAAA</option>
+                            <option value="2"> AAAAAAAAAAAdddd</option>
+                        </select>
+                    </div>
+                    <div class="pop-contract__inputs-input-wrapper">
+                        <div class="pop-contract__inputs-input-left">
+                            <label for="pop-contract__inputs-input2">Площадь объекта</label><br>
+                            <input  onkeypress="if(this.value.length&gt;11 ) return false;"
+                                id="pop-contract__inputs-input2" type="number">
+                        </div>
+                        <div class="pop-contract__inputs-input-right">
+                            <label for="pop-contract__inputs-input3">Площадь объекта</label><br>
+                            <select itemid="pop-contract__inputs-input3" name="" id="">
+                                <option value="">га</option>
+                                <option value="">м2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pop-contract__inputs-input-date">
+                        <label for="pop-contract__inputs-input-date">Срок выполнения, до этой даты</label>
+                        <input  type="date" id="pop-contract__inputs-input-date">
+                    </div>
+                    <div class="pop-contract__inputs-input-calc">
+                        <div class="pop-contract__inputs-input-calc-left">
+                            <label for="pop-contract__inputs-input4">Стоимость работ <span>*</span></label><br>
+                            <input  value="10.000" onkeypress="if(this.value.length&gt;7 ) return false;"
+                                id="pop-contract__inputs-input4" type="number">
+                        </div>
+                        <div class="pop-contract__inputs-input-calc-right">
+                            <label for="pop-contract__inputs-input4">Авансовый платёж<span>*</span></label><br>
+                            <input value="5.000" onkeypress="if(this.value.length&gt;7 ) return false;" id="pop-contract__inputs-input4" name="">
+
+                        </div>
+                    </div>
+                    <div class="pop-contract__inputs-input-total">
+                        <div class="pop-contract__inputs-input-total-wrapper">
+                            Платёж после сдачи работ 
+                            <span>5 000 ₽</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="order-start-pop__button"><a href="/order-start-cf.html">подписать и отправить</a></div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="js/script-for-all.js"></script>
+
+
+</body>
+
+</html>

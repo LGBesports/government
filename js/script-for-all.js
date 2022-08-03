@@ -130,7 +130,7 @@ function filter2() {
 
 
 
-$("#sign-up-form__input-object-file1", "sign-up-form__input-object-file1").change(function () {
+$("#sign-up-form__input-object-file1, sign-up-form__input-object-file1, #pop-contract__file-input").change(function () {
     filename = this.files[0].name;
     console.log(filename);
 });
@@ -201,39 +201,74 @@ function fun4() {
 
     }
 }
-        //заблокировать ввод в input с помощью чекбокса
+//заблокировать ввод в input с помощью чекбокса
 
 
 
 
 
+
+function OpenDate() {
+    var checkboxDate;
+    var sectionDate;
+    checkboxDate = document.getElementById('order-start-pop__choose1');
+    sectionDate = document.getElementById('order-start-pop__date');
+
+
+    if (checkboxDate.checked) {
+        sectionDate.classList.add("active");
+    }
+    else {
+        sectionDate.classList.remove("active");
+    }
+}
+function OpenPrice() {
+    var checkboxPrice;
+    var sectionPrice;
+    checkboxPrice = document.getElementById('order-start-pop__choose2');
+    sectionPrice = document.getElementById('order-start-pop__price');
+
+
+    if (checkboxPrice.checked) {
+        sectionPrice.classList.add("active");
+    }
+    else {
+        sectionPrice.classList.remove("active");
+    }
+}
+//order-start-pop открываем пункты
+
+
+function orderFilter1() {
+    document.getElementById('order-start__myform-filter-button1').classList.add("active");
+    document.getElementById('order-start__myform-filter-button2').classList.remove("active");
+    document.getElementById('order-start__myform-filter-button3').classList.remove("active");
+
+}
+function orderFilter2() {
+    document.getElementById('order-start__myform-filter-button2').classList.add("active");
+    document.getElementById('order-start__myform-filter-button1').classList.remove("active");
+    document.getElementById('order-start__myform-filter-button3').classList.remove("active");
+
+}
+function orderFilter3() {
+    document.getElementById('order-start__myform-filter-button3').classList.add("active");
+    document.getElementById('order-start__myform-filter-button1').classList.remove("active");
+    document.getElementById('order-start__myform-filter-button2').classList.remove("active");
+
+}
+
+        //order фильтр
+
+
+
+        function popContractOpen() {
+            document.getElementById('pop-contract__file').classList.add("active");
         
-        function OpenDate() {
-            var checkboxDate;
-            var sectionDate;
-            checkboxDate = document.getElementById('order-start-pop__choose1');
-            sectionDate = document.getElementById('order-start-pop__date');
-
-
-            if (checkboxDate.checked) {
-                sectionDate.classList.add("active");
-            }
-            else {
-                sectionDate.classList.remove("active");
-            }
         }
-        function OpenPrice() {
-            var checkboxPrice;
-            var sectionPrice;
-            checkboxPrice = document.getElementById('order-start-pop__choose2');
-            sectionPrice = document.getElementById('order-start-pop__price');
-
-
-            if (checkboxPrice.checked) {
-                sectionPrice.classList.add("active");
-            }
-            else {
-                sectionPrice.classList.remove("active");
-            }
+        function popContractClose() {
+            document.getElementById('pop-contract__file').classList.remove("active");
+        
         }
-        //order-start-pop открываем пункты
+
+        //pop-... скрипты

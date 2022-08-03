@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order-start-pop.css?v=1">
+    <link rel="stylesheet" href="css/order.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="order-start-pop__main">
+            <div class="order-start-pop__wrapper">
+                <div class="order-start-pop__title">Согласовать договор</div>
+                <div class="order-start-pop__sub-title">Подтвердите условия повторным вводом</div>
+                <div class="order-start__status-right-document margin"><a href="">Договор 312331.docx</a></div>
+                <div class="pop-approval__double">
+                    <div class="pop-approval__double-left">
+                        <div class="pop-approval__double-left-item">Стоимость работ</div>
+                        <div class="pop-approval__double-left-item">Авансовый платёж</div>
+                        <div class="pop-approval__double-left-item">Срок выполнения</div>
+
+                    </div>
+                    <div class="pop-approval__double-right">
+                        <div class="pop-approval__double-right-item">60 000 ₽</div>
+                        <div class="pop-approval__double-right-item">20 000 ₽</div>
+                        <div class="pop-approval__double-right-item">до 23 августа 2022</div>
+                    </div>
+                </div>
+                <div class="pop-contract__inputs-input-calc">
+                    <div class="pop-contract__inputs-input-calc-left">
+                        <label for="pop-contract__inputs-input4">Стоимость работ <span>*</span></label><br>
+                        <input  value="10.000" onkeypress="if(this.value.length&gt;7 ) return false;"
+                            id="pop-contract__inputs-input4" type="number">
+                    </div>
+                    <div class="pop-contract__inputs-input-calc-right">
+                        <label for="pop-contract__inputs-input4">Авансовый платёж<span>*</span></label><br>
+                        <input value="5.000" onkeypress="if(this.value.length&gt;7 ) return false;" id="pop-contract__inputs-input4" name="">
+
+                    </div>
+                </div>
+                <div class="pop-contract__inputs-input-total">
+                    <div class="pop-contract__inputs-input-total-wrapper">
+                        Платёж после сдачи работ 
+                        <span>5 000 ₽</span>
+                    </div>
+                    
+                </div>
+                <div class="pop-contract__inputs-input-date top">
+                    <label for="pop-contract__inputs-input-date">Срок выполнения, до этой даты</label>
+                    <input  type="date" id="pop-contract__inputs-input-date">
+                </div>
+
+                <div class="order-start-pop__button"><a href="/client-third-step.html">перейти к электронной подписи</a></div>
+                <div class="order-start-pop__button-cancel"><a href="/pop-nonapproval.html">не согласен с условиями</a></div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script> -->
+    <script src="js/script-for-all.js"></script>
+
+
+</body>
+
+</html>

@@ -4,6 +4,114 @@
         margin-left: 15%;
         width: 70vmin;
         padding-bottom: 15vmin;
+        &-top{
+            margin-top: 10vmin;
+            display: flex;
+            gap: 6vmin;
+            &-right{
+                height: 51vmin;
+                border-left: 0.2vmin solid #DBDBDB;
+                min-width: 35vmin;
+                padding-left: 6vmin;
+                &-number{
+                    font-weight: 600;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                }
+                &-date{
+                    font-weight: 400;
+                    font-size: 2vmin;
+                    line-height: 3vmin;
+                    color: #5B5B5B;
+                    margin-top: 1vmin;
+                }
+                &-button{
+                    width: 23vmin;
+                    height: 5vmin;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;    
+                    margin-top: 3vmin;
+                    color: #BD0000;
+                    font-weight: 600;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                    position: relative;
+                    border: 0.3vmin solid #BD0000;
+                    a{
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                    }
+                }
+                &-client{
+                    margin-top: 5vmin;
+                    &-title{
+                        font-weight: 600;
+                        font-size: 2vmin;
+                        line-height: 2.3vmin;
+                    }
+                    &-title.green{
+                        color: #53BD00;
+                        padding-top: 3.5vmin;
+                        position: relative;
+                    }
+                    &-title.green:before{
+                        content: '';
+                        position: absolute;
+                        top: 0vmin;
+                        left: 0;
+                        width: 20vmin;
+                        height: 0.1vmin;
+                        background-color: #DBDBDB;
+                    }
+                    &-link{
+                        margin-top: 1vmin;
+                        a{
+                            color: #298AF6;
+                            font-size: 2vmin;
+                            line-height: 2.3vmin;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    &-link.file{
+                        display: flex;
+                        gap: 0.5vmin;
+                        flex-direction: column;
+                        color: #818181;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                        a{
+                            font-weight: 600;
+                        }
+                    }
+                    &-status{
+                        color: #5B5B5B;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                    }
+                    &-price{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3vmin;
+                        margin-top: 3vmin;
+                        &-wrapper{
+                            color: #818181;
+                            font-size: 1.8vmin;
+                            line-height: 2.1vmin;
+                            span{
+                                font-weight: 600;
+                                font-size: 2vmin;
+                                line-height: 3vmin;
+                                color: #4B4B4B;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &__back{
         margin-bottom: 2.6vmin;
@@ -43,29 +151,80 @@
             line-height: 2.3vmin;
             margin-top: 0.5vmin;
             img{
-                margin-left: 0.5vmin;
+                margin-left: 0.8vmin;
+                margin-right: 0.8vmin;
                 width: 3.1vmin;
                 height: 2.5vmin;
                 display: block;
             }
+            b{
+                color: #A8A8A8;
+                
+            }
+        }
+        b{
+            
         }
         &-right{
             color: #5B5B5B;
             font-size: 2vmin;
             line-height: 2.3vmin;
             display: flex;
+            align-items: flex-end;
             img{
                 margin-left: 0.5vmin;
                 width: 3.1vmin;
                 height: 2.5vmin;
                 display: block;
             }
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30vmin;
+                height: 5vmin;
+                border: 0.3vmin solid #298AF6;
+                color: #298AF6;
+                font-weight: 600;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                position: relative; 
+                background: #fff;
+                a{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+            &-document{
+                margin-bottom: 1.5vmin;
+                a{
+                    text-decoration-line: underline;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                    color: #298AF6;
+                }
+            }
+            &-document.margin{
+                margin-top: 3.5vmin;
+                margin-bottom: 3vmin;
+            }
         }
+        &-right.column{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__status.down{
+        align-items: flex-end;
+        margin-top: 1.5vmin;
     }
     &__map{
         width: 100%;
         height: 25vmin;
         margin-top: 4vmin;
+        width: 62vmin;
         &-bigger{
             display: flex;
             justify-content: flex-end;
@@ -176,7 +335,21 @@
             font-size: 2.6vmin;
             line-height: 3vmin;
             margin-bottom: 2.5vmin;
-            
+            span{
+                font-family: 'Manrope';
+                width: 2.5vmin;
+                height: 2.5vmin;
+                background: #008CFF;
+                margin-left: 1vmin;
+                border-radius: 5vmin;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: 1.6vmin;
+                line-height: 1.8vmin;
+            }
             img{
                 width: 3.1vmin;
                 height: 2.7vmin;
@@ -205,6 +378,13 @@
                     line-height: 2.3vmin;
                     img{
                         margin: 0 0.7vmin;
+                    }
+                    a{
+                        color: #298AF7;
+                        font-weight: 600;
+                        font-size: 2.3vmin;
+                        line-height: 2.7vmin;
+                        margin-right: 3vmin;
                     }
                 }
                 &-bottom{
@@ -260,6 +440,114 @@
                         color: #FFFFFF;
                     }
                 }
+                &-button-less{
+                    width: 24vmin;
+                    background: #008CFF;
+                    height: 5vmin;
+                    a{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                        color: #FFFFFF;
+                    }
+                }
+                &-chat{
+                    width: 21vmin;
+                    background: #008CFF;
+                    height: 5vmin;
+                    a{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                        color: #FFFFFF;
+                    }
+                }
+                &-choose{
+                    width: 28vmin;
+                    background: #53BD00;
+                    height: 5vmin;
+                    margin-left: 3vmin;
+                    position: relative;
+                    
+                    a{
+                        text-transform: uppercase;
+
+                        left: 0;
+                        top: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                        min-width: 100%;
+                        height: 100%;
+                        color: #FFFFFF;
+                    }
+                }
+                &-cancel{
+                    width: 30vmin;
+                    background: #BD0000;
+                    height: 5vmin;
+                    margin-left: 3vmin;
+                    position: relative;
+                    
+                    a{
+                        text-transform: uppercase;
+
+                        left: 0;
+                        top: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                        font-size: 1.8vmin;
+                        line-height: 2.1vmin;
+                        min-width: 100%;
+                        height: 100%;
+                        color: #FFFFFF;
+                    }
+                }
+                &-cancel.orange{
+                    background: #E87F1E;
+                    width: 32vmin;
+                }
+
+            }
+
+            
+        }
+        &-form.client{
+            margin-bottom: 7vmin;
+        }
+        &-filter{
+            display: flex;
+            gap: 3vmin;
+            margin-bottom: 6vmin;
+            &-item{
+
+                button{
+                    padding: 0 2vmin;
+                    background: #FFFFFF;
+                    border: 0.2vmin solid #676767;
+                    border-radius: 2.5vmin;
+                    height: 4vmin;
+                    color: #0C0C0C;
+                    font-size: 1.8vmin;
+                    line-height: 2vmin;
+                }
+                button.active{
+                    padding: 0 2vmin;
+                    background: #E4F3FF;
+                    border: 0.2vmin solid #298AF7;
+                    border-radius: 2.5vmin;
+                    height: 4vmin;
+                    color: #298AF7;
+                    font-size: 1.8vmin;
+                    line-height: 2vmin;
+                }
             }
         }
     }
@@ -269,6 +557,7 @@
         gap: 7.3vmin 1.5vmin;
         margin-top: 9vmin;
         width: 62vmin;
+        margin-bottom: 6vmin;
         &-item{
             width: 14vmin;
             &-top{
@@ -361,4 +650,27 @@
 .maxMap {
     width: 150% !important;
     height: 50vmin !important;
+}
+.pop-approval{
+    &__double{
+        display: flex;
+        font-size: 2vmin;
+        line-height: 2.3vmin;
+        margin-bottom: 7vmin;
+        &-left{
+            width: 24vmin;
+            display: flex;
+            flex-direction: column;
+            gap: 1.7vmin;
+            color: #8F8F8F;
+        }
+        &-right{
+            width: 22vmin;
+            display: flex;
+            flex-direction: column;
+            gap: 1.7vmin;
+            font-weight: 600;
+            color: #1C1D1E;
+        }
+    }
 }
