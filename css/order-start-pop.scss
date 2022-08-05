@@ -419,6 +419,9 @@
         flex-direction: column;
         gap: 2vmin;
     }
+    &__choose.high{
+        margin-top: 6vmin;
+    }
     &__radio{
         min-width: 52vmin;
         label{
@@ -513,6 +516,12 @@
             font-size: 1.6vmin;
             line-height: 1.8vmin;
             margin-bottom: 1vmin;
+        }
+        &-title-left{
+            color: #818181;
+            font-size: 1.6vmin;
+            line-height: 1.8vmin;
+            margin-left: -4.5vmin;
         }
         &-input{
             input{
@@ -726,5 +735,10 @@
         font-weight: 600;
         font-size: 3.3vmin;
         line-height: 3.8vmin;
+    }
+}
+.pop-akt{
+    &__file{
+        margin-top: 4.5vmin;
     }
 }

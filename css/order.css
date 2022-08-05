@@ -265,6 +265,10 @@
   width: 33vmin;
 }
 
+.order-start__status-right button.biggest {
+  width: 36vmin;
+}
+
 .order-start__status-right button.little {
   width: 20vmin;
 }

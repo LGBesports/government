@@ -520,6 +520,10 @@
   gap: 2vmin;
 }
 
+.pop-contract__choose.high {
+  margin-top: 6vmin;
+}
+
 .pop-contract__radio {
   min-width: 52vmin;
 }
@@ -635,6 +639,13 @@
   font-size: 1.6vmin;
   line-height: 1.8vmin;
   margin-bottom: 1vmin;
+}
+
+.pop-contract__file-title-left {
+  color: #818181;
+  font-size: 1.6vmin;
+  line-height: 1.8vmin;
+  margin-left: -4.5vmin;
 }
 
 .pop-contract__file-input input {
@@ -880,5 +891,9 @@
   font-weight: 600;
   font-size: 3.3vmin;
   line-height: 3.8vmin;
+}
+
+.pop-akt__file {
+  margin-top: 4.5vmin;
 }
 /*# sourceMappingURL=order-start-pop.css.map */
