@@ -260,6 +260,10 @@
   height: 100%;
 }
 
+.order-start__status-right button.big {
+  width: 33vmin;
+}
+
 .order-start__status-right-document {
   margin-bottom: 1.5vmin;
 }
@@ -270,6 +274,7 @@
   font-size: 2vmin;
   line-height: 2.3vmin;
   color: #298AF6;
+  margin-right: 4vmin;
 }
 
 .order-start__status-right-document.margin {

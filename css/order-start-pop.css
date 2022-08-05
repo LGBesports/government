@@ -48,6 +48,19 @@
   max-width: 45vmin;
 }
 
+.order-start-pop__sub-title.mb {
+  margin-bottom: 3vmin;
+  min-width: 52vmin;
+}
+
+.order-start-pop__document a {
+  color: #008CFF;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+}
+
 .order-start-pop__letter {
   margin-top: 4.6vmin;
 }

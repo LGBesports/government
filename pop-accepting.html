@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order-start-pop.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="order-start-pop__main">
+            <div class="order-start-pop__wrapper-big">
+                <div class="order-start-pop__title">Приёмка работ</div>
+                <div class="order-start-pop__sub-title mb">Проверьте работу исполнителя</div>
+                <div class="order-start-pop__document"><a href="">Меж+проект.zip</a></div>
+                <div class="pop-contract__choose">
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractClose()" id="pop-contract__choose1" name="contract1"
+                            type="radio"><label for="pop-contract__choose1">Работа выполнена</label>
+                    </div>
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractOpen()" id="pop-contract__choose2" name="contract1"
+                            type="radio"><label for="pop-contract__choose2">Есть замечания</label>
+                    </div>
+                </div>
+                <div id="pop-contract__file" class="pop-contract__file ">
+                    <div class="order-start-pop__letter">
+                        <div class="order-start-pop__letter-title">Напишите комментарий</div>
+                        <div class="order-start-pop__letter-input"><textarea
+                                placeholder=""
+                                type="text"></textarea></div>
+                    </div>
+                </div>
+                
+
+
+
+                <div class="order-start-pop__button"><a href="/client-sixth-step.html">отправить</a></div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="js/script-for-all.js"></script>
+
+
+</body>
+
+</html>
