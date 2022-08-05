@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order-start-pop.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="order-start-pop__main">
+            <div class="order-start-pop__wrapper-big">
+                <div class="order-start-pop__title">Отправить договор</div>
+
+                <div class="pop-contract__choose">
+
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractOpen()" id="pop-contract__choose2" name="contract1"
+                            type="radio"><label for="pop-contract__choose2">Отправлю собственный файл</label>
+                    </div>
+                    <div class="pop-contract__radio">
+                        <input onchange="popContractClose()" id="pop-contract__choose1" name="contract1"
+                            type="radio">
+                            <label for="pop-contract__choose1">Передать физически
+                                <div class="pop-contract__radio-help-block">
+                                    <img class="img-helper" src="img/reg-question.svg" alt="">
+                                    <div class="pop-contract__radio-help">Передайте документы <br>заказчику лично</div>
+                                </div>
+
+                            </label>
+                    </div>
+                </div>
+                <div id="pop-contract__file" class="pop-contract__file">
+                    <div class="pop-contract__file-title">Файл</div>
+                    <div class="pop-contract__file-input mbottom">
+                        <input id="pop-contract__file-input" type="file" style="display: none;">
+                        <label for="pop-contract__file-input">Выбрать файл</label>
+                        
+                    </div>
+                    <div id="div0"></div>
+                    <button class="pop-offer__button-more" onclick="addInputFile()">Добавить ещё файл</button>
+
+                    <div class="pop-offer__or">
+                        ИЛИ
+                    </div>
+                    <div class="pop-offer__link-wrapper">
+                        <div class="pop-contract__file-title">Вставьте ссылку на файл</div>
+                    </div>
+                    <div class="pop-offer-first-links">
+                        <div class="order-start-pop__datail-small">
+                            
+                            <input type="text" id="order-start-pop__detail">
+                        </div>
+                        <div id="input0"></div>
+                    </div>
+                    
+                    <button class="pop-offer__button-more" onclick="addInputLink()">Добавить ещё файл</button>
+                    <div class="pop-offer__or">
+                        ИЛИ
+                    </div>
+                    <div class="pop-offer__link-wrapper">
+                        <div class="pop-contract__file-title">Вставьте ссылку УИН</div>
+                    </div>
+                    <div class="pop-offer-first-links">
+                        <div class="order-start-pop__datail-small">
+                            
+                            <input type="text" id="order-start-pop__detail">
+                        </div>
+                        <div id="input-second0"></div>
+                    </div>
+                    
+                    <button class="pop-offer__button-more" onclick="addInputLink2()">Добавить ещё файл</button>
+
+
+                </div>
+                
+
+
+
+
+                <div class="order-start-pop__button"><a href="/order-start-cf.html">отправить</a></div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="js/script-for-all.js"></script>
+
+
+</body>
+
+</html>

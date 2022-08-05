@@ -1,4 +1,11 @@
 .order-start-pop{
+    
+    &__hard.active{
+        display: block;
+    }
+    &__easy.active{
+        display: block;
+    }
     &__main{
         max-width: 100vw;
         min-height: 100vh;
@@ -223,7 +230,7 @@
             display: flex;
             flex-direction: row;
             left: -2.8vmin;
-            top: 0;
+            top: calc(50% - 1vmin);
             position: absolute;
             width: 2vmin;
             height: 2vmin;
@@ -237,7 +244,7 @@
             background-position: center;
             display: flex;
             left: -2.8vmin;
-            top: 0;
+            top: calc(50% - 1vmin);
             position: absolute;
             width: 2vmin;
             height: 2vmin;
@@ -252,6 +259,157 @@
     &__checkbox.nogap{
         margin-left: 0;
     }
+    &__hard{
+        display: none;
+        margin-top: 4vmin;
+        width: 52vmin;
+    }
+    &__easy{
+        display: none;
+        margin-top: 4vmin;
+        width: 52vmin;
+    }
+    &__datail{
+        
+        &-big{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 4vmin;
+            label{
+                color: #818181;
+                font-size: 1.8vmin;
+                line-height: 2.1vmin;
+                margin-bottom: 0.7vmin;
+                display: block;
+            }
+            input{
+                background: #FFFFFF;
+                border: 0.2vmin solid #008CFF;
+                border-radius: 0.5vmin;
+                width: 100%;
+                height: 6vmin;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                padding: 1.5vmin;
+                
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+        }
+        &-small{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5vmin;
+            label{
+                color: #818181;
+                font-size: 1.8vmin;
+                line-height: 2.1vmin;
+                margin-bottom: 0.7vmin;
+                display: block;
+            }
+            input{
+                background: #FFFFFF;
+                border: 0.2vmin solid #008CFF;
+                border-radius: 0.5vmin;
+                width: 100%;
+                height: 6vmin;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                padding: 1.5vmin;
+                
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+        }
+        &-double{
+            display: flex;
+            width: 100%;
+            gap: 2.5vmin;
+            margin-bottom: 4vmin;
+            &-left{
+                width: 14vmin;
+                label{
+                    color: #818181;
+                    font-size: 1.8vmin;
+                    line-height: 2.1vmin;
+                    margin-bottom: 0.7vmin;
+                    display: block;
+                }
+                input{
+                    background: #FFFFFF;
+                    border: 0.2vmin solid #008CFF;
+                    border-radius: 0.5vmin;
+                    width: 100%;
+                    height: 6vmin;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                    padding: 1.5vmin;
+                    
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    /* display: none; <- Crashes Chrome on hover */
+                    -webkit-appearance: none;
+                    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                }
+            }
+            &-right{
+                width: 35.5vmin;
+                label{
+                    color: #818181;
+                    font-size: 1.8vmin;
+                    line-height: 2.1vmin;
+                    margin-bottom: 0.7vmin;
+                    display: block;
+                }
+                input{
+                    background: #FFFFFF;
+                    border: 0.2vmin solid #008CFF;
+                    border-radius: 0.5vmin;
+                    width: 100%;
+                    height: 6vmin;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                    padding: 1.5vmin;
+                    
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    /* display: none; <- Crashes Chrome on hover */
+                    -webkit-appearance: none;
+                    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                }
+            }
+        }
+        &-file{
+            
+            label{
+                position: relative;
+                font-size: 1.6vmin;
+                line-height: 1.8vmin;
+                color: #818181;
+                margin-bottom: 1vmin;
+                display: inline-block;
+                span{
+                    position: absolute;
+                    top: -0.5vmin;
+                    right: -2.2vmin;
+                    color: #FF0000;
+                    width: 1.8vmin;
+                    line-height: 2.1vmin;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
 }
 .pop-contract{
     &__choose{
@@ -262,6 +420,7 @@
         gap: 2vmin;
     }
     &__radio{
+        min-width: 52vmin;
         label{
             color: #1C1D1E;
         }
@@ -273,7 +432,7 @@
             font-weight: 400;
             font-size: 2.2vmin;
             line-height: 3vmin;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 0.5vmin;
             cursor: pointer; 
@@ -288,8 +447,33 @@
                 width: 5vmin;   
                 height: 4vmin;
                 
-            }  
+            }
+            .pop-contract__radio-help{
+                display: none;
+                
+            }
+            
+            .pop-contract__radio-help-block:hover .pop-contract__radio-help{
+                display: block;
+                position: absolute;
+                top: 4.5vmin;
+                left: 3vmin;
+                padding: 1.6vmin;
+                padding-left: 2vmin;
+                white-space: pre;
+                background: #FFFFFF;
+                border: 1px solid #FFFFFF;
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+                border-radius: 0 1.8vmin 1.8vmin 1.8vmin;
+                font-size: 1.8vmin;
+                line-height: 2.1vmin;
+                color: #0C0C0C;
+            }
+            .pop-contract__radio-help-block{
+                position: relative;
+            }
         }
+        
         label:before {
             content: " ";
             
@@ -300,7 +484,7 @@
             display: flex;
             flex-direction: row;
             left: -4.6vmin;
-            top: calc(50% - 1.4vmin);
+            top: calc(50% - 1.5vmin);
             position: absolute;
             width: 3vmin;
             height: 3vmin;
@@ -315,7 +499,7 @@
             background-position: center;
             display: flex;
             left: -4.6vmin;
-            top: 0;
+            top: calc(50% - 1.5vmin);
             position: absolute;
             width: 3vmin;
             height: 3vmin;
@@ -350,6 +534,10 @@
                 text-decoration: underline;
                 cursor: pointer;
             }
+        }
+        &-input.mbottom{
+            margin-bottom: 1.5vmin;
+            
         }
     }
     &__file.active{
@@ -522,5 +710,21 @@
                 }
             }
         }
+    }
+    
+}
+.pop-offer{
+    &__button-more{
+        color: #3CA7FF;
+        background: none;
+        font-size: 1.8vmin;
+        line-height: 2.1vmin;
+    }
+    &__or{
+        margin: 3vmin 0;
+        color: #797979;
+        font-weight: 600;
+        font-size: 3.3vmin;
+        line-height: 3.8vmin;
     }
 }

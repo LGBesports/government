@@ -66,7 +66,7 @@
                         background-color: #DBDBDB;
                     }
                     &-link{
-                        margin-top: 1vmin;
+                        margin-top: 3vmin;
                         a{
                             color: #298AF6;
                             font-size: 2vmin;
@@ -170,6 +170,7 @@
             font-size: 2vmin;
             line-height: 2.3vmin;
             display: flex;
+            gap: 1.5vmin;
             align-items: flex-end;
             img{
                 margin-left: 0.5vmin;
@@ -199,6 +200,19 @@
             }
             button.big{
                 width: 33vmin;
+            }
+            button.little{
+                width: 20vmin;
+            }
+            button.littlest{
+                width: 17vmin;
+            }
+            button.black{
+                width: 26vmin;
+                font-size: 1.6vmin;
+                line-height: 1.8vmin;
+                border: 0.3vmin solid #232323;
+                color: #232323;
             }
             &-document{
                 margin-bottom: 1.5vmin;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order-start-pop.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="order-start-pop__main">
+            <div class="order-start-pop__wrapper">
+                <div class="order-start-pop__title">Отправить счёт</div>
+                <div class="order-start-pop__sub-title">На сумму предоплаты 20 000 ₽</div>
+                <div class="pop-contract__choose">
+                    <div class="pop-contract__radio">
+                        <input onchange="popHard()" id="pop-contract__details1" name="contract1" type="radio"><label
+                            for="pop-contract__details1">Cформировать автоматически <img src="img/reg-question.svg"
+                                alt=""></label>
+                    </div>
+                    <div class="pop-contract__radio">
+                        <input onchange="popEasy()" id="pop-contract__details2" name="contract1" type="radio"><label
+                            for="pop-contract__details2">Отправлю собственный файл</label>
+                    </div>
+                </div>
+
+                <div class="order-start-pop__hard " id="order-start-pop__hard">
+                    <div class="order-start-pop__datail-big">
+                        <label for="order-start-pop__datail">Ваш ИНН</label>
+                        <input type="number" id="order-start-pop__detail">
+                    </div>
+                    <div class="order-start-pop__datail-big">
+                        <label for="order-start-pop__datail">Номер вашего расчётного счёта</label>
+                        <input type="number" id="order-start-pop__detail">
+                    </div>
+                    <div class="order-start-pop__datail-double">
+                        <div class="order-start-pop__datail-double-left">
+                            <label for="order-start-pop__datail">БИК</label>
+                            <input type="number" id="order-start-pop__detail">
+                        </div>
+                        <div class="order-start-pop__datail-double-right">
+                            <label for="order-start-pop__datail">Корреспондентский счёт</label>
+                            <input type="number" id="order-start-pop__detail">
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="order-start-pop__easy active" id="order-start-pop__easy">
+                    <div class="order-start-pop__datail-file">
+                        <label for="order-start-pop__datail">Файл счёта<span>*</span></label>
+                        <div class="pop-contract__file-input">
+                            <input id="pop-contract__file-input" type="file" style="display: none;">
+                            <label for="pop-contract__file-input">Выбрать файл</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-start-pop__button"><a href="/worker-third-step-pref.html">подписать и отправить</a></div>
+
+            </div>
+        </main>
+
+
+    </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script> -->
+    <script src="js/script-for-all.js"></script>
+
+
+</body>
+
+</html>

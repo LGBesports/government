@@ -53,6 +53,53 @@ function addInput() {
         alert('У вас не может быть больше трёх высших образований');
     }
 }
+
+
+
+
+
+
+var f = 0;
+
+function addInputLink() {
+    if (f < 4) {
+        var str = '<div class="order-start-pop__datail-small"><input type="text" id="order-start-pop__detail"></div> <div id="input' + (f + 1) + '"></div>';
+        document.getElementById('input' + f).innerHTML = str;
+        f++;
+    } else {
+        alert('Вы не можете прикрепить больше 5 ссылок');
+    }
+}
+
+
+
+var d = 0;
+
+function addInputLink2() {
+    if (d < 4) {
+        var str = '<div class="order-start-pop__datail-small"><input type="text" id="order-start-pop__detail"></div> <div id="input-second' + (d + 1) + '"></div>';
+        document.getElementById('input-second' + d).innerHTML = str;
+        d++;
+    } else {
+        alert('Вы не можете прикрепить больше 5 ссылок');
+    }
+}
+
+
+
+
+
+var y = 0;
+
+function addInputFile() {
+    if (y < 4) {
+        var fork = '<div class="pop-contract__file-input mbottom"><input id="pop-contract__file-input " type="file" style="display: none;"><label for="pop-contract__file-input">Выбрать файл</label></div> <div id="div' + (y + 1) + '"></div>';
+        document.getElementById('div' + y).innerHTML = fork;
+        y++;
+    } else {
+        alert('Вы не можете загрузить больше 5 файлов');
+    }
+}
 //добавление новых полей
 
 function removeField(btn) {
@@ -270,5 +317,21 @@ function orderFilter3() {
             document.getElementById('pop-contract__file').classList.remove("active");
         
         }
+
+
+
+
+
+        function popHard() {
+            document.getElementById('order-start-pop__hard').classList.add("active");
+            document.getElementById('order-start-pop__easy').classList.remove("active");
+        
+        }
+        function popEasy() {
+            document.getElementById('order-start-pop__hard').classList.remove("active");
+            document.getElementById('order-start-pop__easy').classList.add("active");
+        
+        }
+        
 
         //pop-... скрипты
