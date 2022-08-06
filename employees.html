@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/media.css?v=1">
+    <link rel="stylesheet" href="css/employees.css?v=1">
+    <link rel="stylesheet" href="css/search.css?v=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="market-start-header">
+            <div class="market-start-header__left">
+                <div class="market-start-header__back">
+                    <img src="img/arrow-left.svg" alt="">Вернуться<br>
+                    в личный кабинет
+                </div>
+                <div class="market-start-header__logo">Маркетплейс<br> кадастровых работ </div>
+                <nav class="market-start-header__nav">
+                    <ul>
+                        <li><a href="/search.html">Найти заказ</a> </li>
+                        <li><a href="">Мои заказы</a> </li>
+                        <li><a href="">Исполнители</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="market-start-header__right-normal">
+                <nav class="market-start-header__nav-right">
+                    <ul>
+                        <li><a href=""><img src="img/nav-messages.svg" alt=""></a></li>
+                        <li><a href=""><img src="img/nav-notifications.svg" alt=""></a></li>
+                        <li><a href=""><img src="img/nav-settings.svg" alt=""></a></li>
+                    </ul>
+
+                </nav>
+                <div class="market-start-header__nav-ava">
+                    <a href=""><img src="img/nav-avatar.png" alt=""></a>
+                </div>
+            </div>
+
+
+        </header>
+        <main class="employees">
+            <div class="employees__title">Исполнители</div>
+            <div class="employees__filter">
+                <div class="employees__filter-item search">
+                    <label for="employees__filter-search">Город, адрес, район, метро</label>
+                    <div class="employees__filter-wrapper">
+                        <input id="employees__filter-search" type="search" id="search" class="search__input">
+                        <button type="button" data-target="#search" id="clear" class="hidden search__clear"><img
+                                src="img/search-lupa.svg" alt=""></button>
+
+                    </div>
+                </div>
+                <div class="employees__filter-item choose">
+                    <label for="employees__filter-search">Как давно на маркетплейсе</label>
+                    <div class="employees__filter-wrapper">
+                        <select name="employee__years" id="employee__years">
+                            <option value="1">Неважно1</option>
+                            <option value="2">Неважно2</option>
+                            <option value="3">Неважно3</option>
+                            <option value="4">Неважно4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="employees__filter-item choose">
+                    <label for="employees__filter-search">Опыт работы</label>
+                    <div class="employees__filter-wrapper">
+                        <select name="employee__years" id="employee__years">
+                            <option value="1">1от 5 до 10 лет</option>
+                            <option value="2">2от 5 до 10 лет</option>
+                            <option value="3">3от 5 до 10 лет</option>
+                            <option value="4">4от 5 до 10 лет</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="employees__filter-item choose">
+                    <label for="employees__filter-search">Форма работы  </label>
+                    <div class="employees__filter-wrapper">
+                        <select name="employee__years" id="employee__years">
+                            <option value="1">Любая1</option>
+                            <option value="2">Любая2</option>
+                            <option value="3">Любая3</option>
+                            <option value="4">Любая4</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="search__filter-boxes left">
+                <div class="search__filter-boxes-item">
+                    <input id="search__filter-boxes-input1" type="checkbox"><label
+                        for="search__filter-boxes-input1">Сейчас на сайте</label>
+                </div>
+                <div class="search__filter-boxes-item">
+                    <input id="search__filter-boxes-input2" type="checkbox"><label
+                        for="search__filter-boxes-input2">Показывать только тех, кто принимает заказы <img src="img/employee-question.svg" alt=""></label>
+                </div>
+                
+            </div>
+            sdfsdf
+        </main>
+
+
+    </div>
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script> -->
+    <!-- <script src="js/script-for-all.js"></script> -->
+    <script>
+        window.onload = function () {
+            var search = document.querySelector(".search");
+            if (search) {
+                search.addEventListener('keyup', showButton, true);
+                search.addEventListener('click', resetInput, true);
+                search.addEventListener('click', showButton, true);
+            }
+        }
+
+
+        function resetInput(e) {
+            var input = this.querySelector('input');
+            input.value = input.defaultValue;
+        }
+
+        function showButton() {
+            var button = this.querySelector('button'),
+                input = this.querySelector('input');
+            if (input.value.length) {
+                removeClass(button, "hidden");
+            } else {
+                addClass(button, 'hidden');
+            }
+        }
+
+        function addClass(o, c) {
+            var re = new RegExp("(^|\\s)" + c + "(\\s|$)", "g")
+            if (re.test(o.className)) return
+            o.className = (o.className + " " + c).replace(/\s+/g, " ").replace(/(^ | $)/g, "")
+        }
+
+        function removeClass(o, c) {
+            var re = new RegExp("(^|\\s)" + c + "(\\s|$)", "g")
+            o.className = o.className.replace(re, "$1").replace(/\s+/g, " ").replace(/(^ | $)/g, "")
+        }
+    </script>
+
+</body>
+
+</html>

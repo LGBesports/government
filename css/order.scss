@@ -162,6 +162,9 @@
                 
             }
         }
+        span.finished{
+            color: #53BD00;
+        }
         b{
             
         }
@@ -209,6 +212,29 @@
             }
             button.littlest{
                 width: 17vmin;
+            }
+            button.cancel{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30vmin;
+                
+                border: none;
+                height: 1.8vmin;
+                color: #298AF6;
+                font-weight: 600;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                position: relative; 
+                background: #fff;
+                a{
+                    
+                    width: 100%;
+                    height: 100%;
+                    color: #F62929;
+                    font-size: 1.6vmin;
+                    line-height: 1.8vmin;
+                }
             }
             button.black{
                 width: 26vmin;
@@ -657,6 +683,15 @@
                 font-weight: 600;
                 font-size: 2vmin;
                 line-height: 2.3vmin;
+            }
+            &-bottom-link{
+                margin-top: 0.7vmin;
+                a{
+                text-decoration-line: underline;
+                font-size: 1.8vmin;
+                line-height: 2.1vmin;
+                color: #298AF6;
+                }
             }
         }
         

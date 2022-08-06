@@ -40,6 +40,7 @@
 }
 
 .order-start-pop__title {
+  min-width: 52vmin;
   font-weight: 600;
   font-size: 3.2vmin;
   line-height: 3.7vmin;
@@ -59,6 +60,30 @@
 .order-start-pop__sub-title.mb {
   margin-bottom: 3vmin;
   min-width: 52vmin;
+}
+
+.order-start-pop__akt-link {
+  padding-top: 12vmin;
+  padding-bottom: 6vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order-start-pop__akt-link a {
+  margin: 0 auto;
+  display: inline;
+  position: relative;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-weight: 600;
+  font-size: 3.3vmin;
+  line-height: 3.8vmin;
+  color: #008CFF;
+  text-align: center;
 }
 
 .order-start-pop__document a {
@@ -125,6 +150,47 @@
 }
 
 .order-start-pop__letter-input textarea::placeholder {
+  color: #989898;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+}
+
+.order-start-pop__letter-input-little {
+  width: 52vmin;
+  height: 8vmin;
+  background: #FFFFFF;
+  border: 0.2vmin solid #008CFF;
+  border-radius: 0.5vmin;
+}
+
+.order-start-pop__letter-input-little textarea {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+  padding: 1.5vmin;
+}
+
+.order-start-pop__letter-input-little textarea::-webkit-input-placeholder {
+  color: #989898;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+}
+
+.order-start-pop__letter-input-little textarea:-ms-input-placeholder {
+  color: #989898;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+}
+
+.order-start-pop__letter-input-little textarea::-ms-input-placeholder {
+  color: #989898;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+}
+
+.order-start-pop__letter-input-little textarea::placeholder {
   color: #989898;
   font-size: 1.8vmin;
   line-height: 2.1vmin;
@@ -747,6 +813,7 @@
           appearance: none;
   font-size: 1.8vmin;
   padding-left: 2vmin;
+  appearance: none;
   background: url("../img/pop-select.svg") no-repeat;
   background-position: center right 1.5vmin;
 }
@@ -895,5 +962,360 @@
 
 .pop-akt__file {
   margin-top: 4.5vmin;
+}
+
+.pop-write-feedback__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vmin;
+  gap: 3vmin;
+  color: #298AF7;
+  font-weight: 600;
+  font-size: 2.3vmin;
+  line-height: 2.8vmin;
+}
+
+.pop-write-feedback__wrapper img {
+  width: 8vmin;
+  height: 8vmin;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10vmin;
+}
+
+.pop-write-feedback__stars {
+  margin-top: 4vmin;
+}
+
+.pop-write-feedback__stars-title {
+  width: 14vmin;
+  color: #1C1D1E;
+  font-size: 1.8vmin;
+  line-height: 2.1vmin;
+}
+
+.pop-write-feedback__stars-item1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3vmin;
+  gap: 3vmin;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__icon {
+  pointer-events: none;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__input1 {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__input1--none {
+  display: none;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__label1 {
+  cursor: pointer;
+  padding: 0 0.4vmin;
+  font-size: 2.5vmin;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__input1:checked ~ .rating__label1 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating-group:hover .rating__label1 .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item1 #full-stars-example-two .rating__input1:hover ~ .rating__label1 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3vmin;
+  gap: 3vmin;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__icon {
+  pointer-events: none;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__input2 {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__input2--none {
+  display: none;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__label2 {
+  cursor: pointer;
+  padding: 0 0.4vmin;
+  font-size: 2.5vmin;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__input2:checked ~ .rating__label2 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating-group:hover .rating__label2 .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item2 #full-stars-example-two .rating__input2:hover ~ .rating__label2 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3vmin;
+  gap: 3vmin;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__icon {
+  pointer-events: none;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__input3 {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__input3--none {
+  display: none;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__label3 {
+  cursor: pointer;
+  padding: 0 0.4vmin;
+  font-size: 2.5vmin;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__input3:checked ~ .rating__label3 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating-group:hover .rating__label3 .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item3 #full-stars-example-two .rating__input3:hover ~ .rating__label3 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3vmin;
+  gap: 3vmin;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__icon {
+  pointer-events: none;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__input4 {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__input4--none {
+  display: none;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__label4 {
+  cursor: pointer;
+  padding: 0 0.4vmin;
+  font-size: 2.5vmin;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__input4:checked ~ .rating__label4 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating-group:hover .rating__label4 .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item4 #full-stars-example-two .rating__input4:hover ~ .rating__label4 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3vmin;
+  gap: 3vmin;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two {
+  /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__icon {
+  pointer-events: none;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__input5 {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__input5--none {
+  display: none;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__label5 {
+  cursor: pointer;
+  padding: 0 0.4vmin;
+  font-size: 2.5vmin;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__input5:checked ~ .rating__label5 .rating__icon--star {
+  color: #ddd;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating-group:hover .rating__label5 .rating__icon--star {
+  color: orange;
+}
+
+.pop-write-feedback__stars-item5 #full-stars-example-two .rating__input5:hover ~ .rating__label5 .rating__icon--star {
+  color: #ddd;
 }
 /*# sourceMappingURL=order-start-pop.css.map */
