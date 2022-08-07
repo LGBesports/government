@@ -68,6 +68,7 @@
                 color: #989898;
                 background: url(../img/pop-select.svg) no-repeat;
                 background-position: center right 1.5vmin;
+                background-size: 2vmin 1.2vmin;
             }
             
             
@@ -85,7 +86,157 @@
             position: relative;
         }
     }
-    
+    &__card{
+        margin-bottom: 10vmin;
+        display: flex;
+        &-wrapperl{
+            width: 81vmin;
+            display: flex;
+        }
+        &-left{
+            
+            display: flex;
+
+        }
+        &-ava{
+            
+            border-radius: 10vmin;
+            margin-right: 4vmin;
+            img{
+            width: 15vmin;
+            height: 15vmin;
+            display: block;
+            object-fit: contain;
+            }
+            &-stars{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2.5vmin;
+                font-size: 2vmin;
+                line-height: 2.3vmin;
+                color: #373737;
+                margin-bottom: 1vmin;
+                img{
+                    width: 10vmin;
+                    height: 1.7vmin;
+                    margin-left: 0.5vmin;
+                }
+            }
+            &-link{
+                display: flex;
+                justify-content: center;
+                a{
+                    color: #008CFF;
+                    font-size: 2vmin;
+                    line-height: 2.3vmin;
+                }
+            }
+            &-disable{
+                color: #9A9A9A;
+                font-size: 2vmin;
+                margin-top: 1.5vmin;
+                line-height: 2.3vmin;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-top{
+            display: flex;
+            height: 3vmin;
+            align-items: flex-end;
+            font-size: 2vmin;
+            line-height: 2vmin;
+            margin-bottom: 2vmin;
+            a{
+                color: #008CFF;
+                font-weight: 600;
+                font-size: 2.6vmin;
+                line-height: 2.8vmin;
+                margin-right: 1vmin;
+            }
+            span{
+                margin: 0 1vmin;
+                img{
+                    width: 2vmin;
+                    height: 2vmin;
+                    display: block;
+
+                }
+
+            }
+            b{
+                font-weight: 400;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 22vmin;
+                height: 2vmin;
+                white-space: nowrap;
+            }
+        }
+        &-subtop{
+            color: #373737;
+            font-size: 2vmin;
+            line-height: 2.3vmin;
+            margin-bottom: 2vmin;
+            span{
+                color: #008CFF;
+            }
+        }
+        &-subbottom{
+            display: flex;
+            align-items: center;
+            color: #373737;
+            font-size: 2vmin;
+            line-height: 2.3vmin;
+            margin-bottom: 2vmin;
+            img{
+                margin-left: 1vmin;
+                width: 3.5vmin;
+                height: 3.5vmin;
+                display: block;
+            }
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            color: #373737;
+            font-size: 2vmin;
+            line-height: 2.3vmin;
+            margin-bottom: 2.5vmin;
+            
+        }
+        &-button{
+            button{
+                width: 27vmin;
+                height: 5vmin;
+                background: #008CFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.6vmin;
+                line-height: 1.8vmin;
+                color: #FFFFFF;
+            }
+            button.disable{
+                width: 35vmin;
+                height: 5vmin;
+                background: #BFBFBF;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.6vmin;
+                line-height: 1.8vmin;
+                color: #FFFFFF;
+            }
+        }
+        &-wrapperr{
+            height: 17vmin;
+            padding-left: 5vmin;
+            border-left: 0.2vmin solid #DBDBDB;
+            color: #373737;
+            font-size: 2vmin;
+            line-height: 3vmin;
+        }
+    }
 }
 .search__filter-boxes.left{
     margin-bottom: 9vmin;
@@ -99,4 +250,7 @@
             height: 2.5vmin;
         }
     }
+}
+.profile__wrapper-review-pager.big{
+    width: 71vmin;
 }

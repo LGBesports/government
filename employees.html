@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/media.css?v=1">
     <link rel="stylesheet" href="css/employees.css?v=1">
     <link rel="stylesheet" href="css/search.css?v=1">
+    <link rel="stylesheet" href="css/order.css?v=1">
+    <link rel="stylesheet" href="css/profile.css?v=1">
 </head>
 
 <body>
@@ -81,7 +83,7 @@
                     </div>
                 </div>
                 <div class="employees__filter-item choose">
-                    <label for="employees__filter-search">Форма работы  </label>
+                    <label for="employees__filter-search">Форма работы </label>
                     <div class="employees__filter-wrapper">
                         <select name="employee__years" id="employee__years">
                             <option value="1">Любая1</option>
@@ -91,7 +93,7 @@
                         </select>
                     </div>
                 </div>
-                
+
             </div>
             <div class="search__filter-boxes left">
                 <div class="search__filter-boxes-item">
@@ -100,11 +102,238 @@
                 </div>
                 <div class="search__filter-boxes-item">
                     <input id="search__filter-boxes-input2" type="checkbox"><label
-                        for="search__filter-boxes-input2">Показывать только тех, кто принимает заказы <img src="img/employee-question.svg" alt=""></label>
+                        for="search__filter-boxes-input2">Показывать только тех, кто принимает заказы <img
+                            src="img/employee-question.svg" alt=""></label>
                 </div>
-                
+
             </div>
-            sdfsdf
+            <div class="order-start__myform-filter">
+                <div class="order-start__myform-filter-item">
+                    <button id="order-start__myform-filter-button1" onclick="orderFilter1();">по стоимости
+                        работ</button>
+                </div>
+                <div class="order-start__myform-filter-item">
+                    <button id="order-start__myform-filter-button2" onclick="orderFilter2();" class="active">по
+                        отзывам</button>
+                </div>
+                <div class="order-start__myform-filter-item">
+                    <button id="order-start__myform-filter-button3" onclick="orderFilter3();">по сроку</button>
+                </div>
+                <div class="order-start__myform-filter-item">
+                    <button id="order-start__myform-filter-button4" onclick="orderFilter4();">по статистике</button>
+                </div>
+            </div>
+            <div class="employees__cards">
+                <div class="employees__card">
+                    <div class="employees__card-wrapperl">
+                        <div class="employees__card-left">
+                            <div class="employees__card-ava">
+                                <img src="img/employee-ava.png" alt="">
+                                <div class="employees__card-ava-stars">5,0 <img src="img/employee-stars.png" alt="">
+                                </div>
+                                <div class="employees__card-ava-link"><a href="">(8 отзывов)</a></div>
+                                <!-- <div class="employees__card-ava-disable">Нет отзывов</div> -->
+                            </div>
+
+                        </div>
+                        <div class="employees__right">
+                            <div class="employees__card-top">
+                                <a href="/profile-company.html">Алексей М.</a>
+                                Регион деятельности
+                                <span><img src="img/employee-map.svg" alt=""></span>
+                                <b>г. Москва</b>
+                            </div>
+                            <div class="employees__card-subtop">
+                                На маркетплейсе выполнил <span>35 заказов</span> с сентября 2022
+                            </div>
+                            <div class="employees__card-subbottom">
+                                Статистика работы: 84%, 842 из 1000 <img src="img/reg-question.svg" alt="">
+                            </div>
+                            <div class="employees__card-bottom">
+                                Опыт работы 10 лет
+                            </div>
+                            <div class="employees__card-button">
+                                <button>предложить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employees__card-wrapperr">
+                        Индивидуальный <br> предприниматель
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="employees__cards">
+                <div class="employees__card">
+                    <div class="employees__card-wrapperl">
+                        <div class="employees__card-left">
+                            <div class="employees__card-ava">
+                                <img src="img/employee-ava2.png" alt="">
+                                <div class="employees__card-ava-disable">Нет отзывов</div>
+                            </div>
+
+                        </div>
+                        <div class="employees__right">
+                            <div class="employees__card-top">
+                                <a href="">Борис М.</a>
+                                Регион деятельности
+                                <span><img src="img/employee-map.svg" alt=""></span>
+                                <b>г. Москва</b>
+                            </div>
+                            <div class="employees__card-subtop">
+                                На маркетплейсе выполнил <span>35 заказов</span> с сентября 2022
+                            </div>
+                            <div class="employees__card-subbottom">
+                                Статистика работы: 89%, 89 из 100 <img src="img/reg-question.svg" alt="">
+                            </div>
+                            <div class="employees__card-bottom">
+                                Опыт работы 7 лет
+                            </div>
+                            <div class="employees__card-button">
+                                <button class="disable">временно не принимает заказы</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employees__card-wrapperr">
+                        Сотрудник <br> ООО "Название”
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="employees__cards">
+                <div class="employees__card">
+                    <div class="employees__card-wrapperl">
+                        <div class="employees__card-left">
+                            <div class="employees__card-ava">
+                                <img src="img/employee-ava3.png" alt="">
+                                
+                                <div class="employees__card-ava-disable">Нет отзывов</div>
+                            </div>
+
+                        </div>
+                        <div class="employees__right">
+                            <div class="employees__card-top">
+                                <a href="/profile-ip.html">Глеб М.</a>
+                                Регион деятельности
+                                <span><img src="img/employee-map.svg" alt=""></span>
+                                <b>г. Москва</b>
+                            </div>
+                            <div class="employees__card-subtop">
+                                На маркетплейсе выполнил <span>35 заказов</span> с сентября 2022
+                            </div>
+                            <div class="employees__card-subbottom">
+                                Статистика работы: 100%, 5 из 5 <img src="img/reg-question.svg" alt="">
+                            </div>
+                            <div class="employees__card-bottom">
+                                Опыт работы 6 лет
+                            </div>
+                            <div class="employees__card-button">
+                                <button>предложить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employees__card-wrapperr">
+                        Индивидуальный <br> предприниматель
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="employees__cards">
+                <div class="employees__card">
+                    <div class="employees__card-wrapperl">
+                        <div class="employees__card-left">
+                            <div class="employees__card-ava">
+                                <img src="img/employee-ava4.png" alt="">
+                                <div class="employees__card-ava-stars">5,0 <img src="img/employee-stars.png" alt="">
+                                </div>
+                                <div class="employees__card-ava-link"><a href="">(2 отзыва)</a></div>
+                                <!-- <div class="employees__card-ava-disable">Нет отзывов</div> -->
+                            </div>
+
+                        </div>
+                        <div class="employees__right">
+                            <div class="employees__card-top">
+                                <a href="">Игорь П.</a>
+                                Регион деятельности
+                                <span><img src="img/employee-map.svg" alt=""></span>
+                                <b>г. Москва</b>
+                            </div>
+                            <div class="employees__card-subtop">
+                                На маркетплейсе выполнил <span>35 заказов</span> с сентября 2022
+                            </div>
+                            <div class="employees__card-subbottom">
+                                Статистика работы: 84%, 8400 из 10000 <img src="img/reg-question.svg" alt="">
+                            </div>
+                            <div class="employees__card-bottom">
+                                Опыт работы 9 лет
+                            </div>
+                            <div class="employees__card-button">
+                                <button class="disable">временно не принимает заказы</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employees__card-wrapperr">
+                        Сотрудник <br> ООО "Название”
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="employees__cards">
+                <div class="employees__card">
+                    <div class="employees__card-wrapperl">
+                        <div class="employees__card-left">
+                            <div class="employees__card-ava">
+                                <img src="img/employee-ava5.png" alt="">
+                                
+                                <div class="employees__card-ava-disable">Нет отзывов</div>
+                            </div>
+
+                        </div>
+                        <div class="employees__right">
+                            <div class="employees__card-top">
+                                <a href="">Алексей М.</a>
+                                Регион деятельности
+                                <span><img src="img/employee-map.svg" alt=""></span>
+                                <b>г. Москва</b>
+                            </div>
+                            <div class="employees__card-subtop">
+                                На маркетплейсе выполнил <span>35 заказов</span> с сентября 2022
+                            </div>
+                            <div class="employees__card-subbottom">
+                                Статистика работы: 0%, 0 из 0 <img src="img/reg-question.svg" alt="">
+                            </div>
+                            <div class="employees__card-bottom">
+                                Опыт работы 10 лет
+                            </div>
+                            <div class="employees__card-button">
+                                <button class="disable">временно не принимает заказы</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employees__card-wrapperr">
+                        Сотрудник <br> ООО "Название”
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="profile__wrapper-review-pager big">
+                <div class="profile__wrapper-review-pager-left">
+                    Показывать на странице: <select name="pager" id="profile__wrapper-review-pager">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                    </select>
+                </div>
+                <div class="profile__wrapper-review-pager-right">
+                    <button class="active">1</button>
+                    <button>2</button>
+                </div>
+            </div>
         </main>
 
 
@@ -113,7 +342,7 @@
 
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script> -->
-    <!-- <script src="js/script-for-all.js"></script> -->
+    <script src="js/script-for-all.js"></script>
     <script>
         window.onload = function () {
             var search = document.querySelector(".search");

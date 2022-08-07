@@ -83,6 +83,7 @@
   color: #989898;
   background: url(../img/pop-select.svg) no-repeat;
   background-position: center right 1.5vmin;
+  background-size: 2vmin 1.2vmin;
 }
 
 .employees__filter-item.choose input::-webkit-outer-spin-button,
@@ -96,6 +97,205 @@
 .employees__filter-wrapper {
   margin-top: 1vmin;
   position: relative;
+}
+
+.employees__card {
+  margin-bottom: 10vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.employees__card-wrapperl {
+  width: 81vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.employees__card-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.employees__card-ava {
+  border-radius: 10vmin;
+  margin-right: 4vmin;
+}
+
+.employees__card-ava img {
+  width: 15vmin;
+  height: 15vmin;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.employees__card-ava-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5vmin;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+  color: #373737;
+  margin-bottom: 1vmin;
+}
+
+.employees__card-ava-stars img {
+  width: 10vmin;
+  height: 1.7vmin;
+  margin-left: 0.5vmin;
+}
+
+.employees__card-ava-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.employees__card-ava-link a {
+  color: #008CFF;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+}
+
+.employees__card-ava-disable {
+  color: #9A9A9A;
+  font-size: 2vmin;
+  margin-top: 1.5vmin;
+  line-height: 2.3vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.employees__card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3vmin;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 2vmin;
+  line-height: 2vmin;
+  margin-bottom: 2vmin;
+}
+
+.employees__card-top a {
+  color: #008CFF;
+  font-weight: 600;
+  font-size: 2.6vmin;
+  line-height: 2.8vmin;
+  margin-right: 1vmin;
+}
+
+.employees__card-top span {
+  margin: 0 1vmin;
+}
+
+.employees__card-top span img {
+  width: 2vmin;
+  height: 2vmin;
+  display: block;
+}
+
+.employees__card-top b {
+  font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 22vmin;
+  height: 2vmin;
+  white-space: nowrap;
+}
+
+.employees__card-subtop {
+  color: #373737;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+  margin-bottom: 2vmin;
+}
+
+.employees__card-subtop span {
+  color: #008CFF;
+}
+
+.employees__card-subbottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #373737;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+  margin-bottom: 2vmin;
+}
+
+.employees__card-subbottom img {
+  margin-left: 1vmin;
+  width: 3.5vmin;
+  height: 3.5vmin;
+  display: block;
+}
+
+.employees__card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #373737;
+  font-size: 2vmin;
+  line-height: 2.3vmin;
+  margin-bottom: 2.5vmin;
+}
+
+.employees__card-button button {
+  width: 27vmin;
+  height: 5vmin;
+  background: #008CFF;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.6vmin;
+  line-height: 1.8vmin;
+  color: #FFFFFF;
+}
+
+.employees__card-button button.disable {
+  width: 35vmin;
+  height: 5vmin;
+  background: #BFBFBF;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.6vmin;
+  line-height: 1.8vmin;
+  color: #FFFFFF;
+}
+
+.employees__card-wrapperr {
+  height: 17vmin;
+  padding-left: 5vmin;
+  border-left: 0.2vmin solid #DBDBDB;
+  color: #373737;
+  font-size: 2vmin;
+  line-height: 3vmin;
 }
 
 .search__filter-boxes.left {
@@ -116,5 +316,9 @@
   margin-left: 0.5vmin;
   width: 3vmin;
   height: 2.5vmin;
+}
+
+.profile__wrapper-review-pager.big {
+  width: 71vmin;
 }
 /*# sourceMappingURL=employees.css.map */
